@@ -1,0 +1,46 @@
+html {
+  color: white;
+  background-color: black;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: row;
+  padding: 0 7vw 0 7vw;
+}
+
+.title {
+  flex: 30%;
+  padding: 0 1vw 0 0;
+}
+
+.description-container {
+  flex: 70%;
+  padding: 0 0 0 1vw;
+}
+
+.image-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-bottom: 10vh;
+
+  img {
+      max-width: 65%;
+      height: auto;
+  
+      &:not(:last-child) {
+          margin-bottom: 5vh;
+      }
+  }
+
+  video {
+      max-width: 70%;
+      height: auto;
+  
+      &:not(:last-child) {
+          margin-bottom: 2vh;
+      } 
+   }
+}

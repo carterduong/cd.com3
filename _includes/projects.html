@@ -1,0 +1,36 @@
+{% for project in site.data.projects %}
+<br>
+<br>
+<br>
+<div class="project">
+
+  <div class="image-container">
+      {% for image in project.images %}
+        <img src="{{image}}">
+      {% endfor %}
+      {% for gif in project.gifs %}
+        <video src="{{gif}}" autoplay muted loop></video>
+      {% endfor %}
+  </div>
+
+  <div class="text-container">
+    <div class="title">
+        {{project.title}}
+    </div>
+      
+    <div class="description-container">
+      <div class="meta-text">
+        {{project.role}}
+        <br>
+        {{project.date}}
+        <br>
+        <br>
+        {{project.collaborators}}
+      </div>
+      <p class="description-text">
+        {{project.description}}
+      </p>
+    </div>
+  </div>
+</div>
+{% endfor %}

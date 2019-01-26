@@ -1,0 +1,48 @@
+- Fashion Quarterly: 
+  title: Fashion Quarterly
+  link:
+  date: 2017–2018
+  role: Co-Editor, Art Direction, Design
+  description: A student-run publication that celebrates the intersection of style, art, and design at UC San Diego.
+  collaborators: Photography by Dora Wang, Lily Tang, and Carter Duong<br>Text by Leanza Ellacer and Nariman Piri
+  images:
+    - assets/img/rectangle.svg
+
+- tu.na: 
+  title: tu.na
+  date: August 2018
+  role: Web Design, Development
+  description: is a utility developed to migrate Tumblr 'likes' to the are.na platform.
+  images:
+    - assets/img/rectangle.svg
+    - assets/img/rectangle.svg
+
+- Heavy Friends: 
+  title: Heavy Friends
+  date: April 2018
+  role: Web Design, Development
+  description: (with DJ ABG and DJ SAT -2400) was a weekly radio show based out of KSDT at UC San Diego.
+  images:
+    - assets/img/hffm-tear-small.png
+    - assets/img/iPhone_1.png
+
+
+- Résumé: 
+  title: Résumé
+  date: November 2016
+  role: Game Design, Development  
+  description: is a game about being true to yourself.
+  gifs:
+    - assets/img/resume-1.mp4
+    - assets/img/resume-2.mp4
+    - assets/img/resume-3.mp4
+
+- Extras: 
+  title: Extras
+  date: 2016–2018
+  role:
+  description:
+  images:
+    - assets/img/160.png
+    - assets/img/vis1@0,75x.png
+    - assets/img/rents@1x.png 
