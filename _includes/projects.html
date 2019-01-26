@@ -1,7 +1,4 @@
 {% for project in site.data.projects %}
-<br>
-<br>
-<br>
 <div class="project">
 
   <div class="image-container">
@@ -14,23 +11,25 @@
   </div>
 
   <div class="text-container">
-    <div class="title">
+    <span class="title">
         {{project.title}}
-    </div>
+    </span>
       
-    <div class="description-container">
-      <div class="meta-text">
+    <span class="description-container">
+      <p class="meta-text">
         {{project.role}}
         <br>
         {{project.date}}
         <br>
         <br>
         {{project.collaborators}}
-      </div>
+      </p>
       <p class="description-text">
         {{project.description}}
       </p>
-    </div>
+    </span>
   </div>
+
+  <div class="vertical-line"></div>
 </div>
 {% endfor %}
