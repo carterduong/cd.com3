@@ -3,22 +3,6 @@ html {
   background-color: black;
 }
 
-.text-container {
-  display: flex;
-  flex-direction: row;
-  padding: 0 7vw 0 7vw;
-}
-
-.title {
-  flex: 30%;
-  padding: 0 1vw 0 0;
-}
-
-.description-container {
-  flex: 70%;
-  padding: 0 0 0 1vw;
-}
-
 .image-container {
   align-items: center;
   display: flex;
@@ -43,4 +27,22 @@ html {
           margin-bottom: 2vh;
       } 
    }
+}
+
+.landing {
+  height: 100vh;
+}
+
+.name {
+  padding: 2vh 0 2vh 2vh;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: row;
+  padding: 0 8vw 0 9vw;
+}
+
+.title {
+  padding: 0 3vh 0 3vh;
 }
