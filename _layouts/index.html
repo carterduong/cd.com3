@@ -3,32 +3,63 @@
     {% include head.html %}
     
     <body>
-      <div class="landing">
-        <div class="name">⟡ Carter Duong</div>
+      {% include accordion.html %}
+      
+      <div class="name">⟡ Carter Duong</div>
+      <div class="project" id="landing">
         <div class="image-container">
-          <img src="assets/img/rectangle.svg">
+          <img src="assets/img/squiggle.png">
         </div>
         <div class="text-container">
-          <span class="title">
+          <h1 class="title">
             INFO
-          </span>
+          </h1>
           <p class="description-container">
-              Carter Duong is a designer, developer, and artist from 
-              the Bay Area and (soon to be) based in Los Angeles. 
-              He recently graduated from UC San Diego with a B.A. 
-              in Interdisciplinary Computing and the Arts.
-              <br><br>
-              EMAIL
-              <br>
-              ARE.NA
-              <br>
-              TUMBLR   
+            Carter Duong is a designer, developer, and artist from 
+            the Bay Area and (soon to be) based in Los Angeles. 
+            He recently graduated from UC San Diego with a B.A. 
+            in Interdisciplinary Computing and the Arts.
+            <br><br>
+            EMAIL
+            <br>
+            ARE.NA
+            <br>
+            TUMBLR   
           </p>
         </div>
       </div>
 
+      <div class="vertical-line"></div>
+
       {% include projects.html %}
 
+      <div class="landing" id="bottom">
+          <div class="name">⟡ Carter Duong</div>
+          <!-- sub with canvas -->
+          <div class="image-container">
+            <img src="assets/img/rectangle.svg">
+          </div>
+          <div class="text-container">
+            <h1 class="title">
+              INFO
+            </h1>
+            <p class="description-container">
+                Carter Duong is a designer, developer, and artist from 
+                the Bay Area and (soon to be) based in Los Angeles. 
+                He recently graduated from UC San Diego with a B.A. 
+                in Interdisciplinary Computing and the Arts.
+                <br><br>
+                EMAIL
+                <br>
+                GITHUB
+                <br>
+                ARE.NA
+                <br>
+                TUMBLR   
+            </p>
+          </div>
+        </div>
+        
       {% include js.html %}
     </body>
 </html>

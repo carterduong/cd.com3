@@ -1,26 +1,90 @@
+$break-medium: 600px;
+
 html {
   color: white;
   background-color: black;
   font-size: 16px;
 }
 
+h1 {
+  margin: 0 0 0 0;
+  padding: 0 3vh 0 3vh;
+
+  @media screen and (min-width: $break-medium) {
+    padding: 0 0 0 0;
+  }
+}
+
 p {
   margin: 1rem 0 0 0;
 }
-.vertical-line{
-  border-left: 0.1rem solid grey;
-  width: .2rem; /* Use only border style */
-  height: 10vh;
-  display: block;
-  margin: 0 auto 3rem auto;
+
+/**** Accordion ****/
+#accordion {
+  margin:100px auto;
+  padding:0;
+  width:500px;
+  }    
+#accordion li {
+  list-style:none;
+  width:100%;
+  }    
+#accordion li label {
+  display:block;
+
+  }    
+/* Hide the radio buttons */
+#accordion label + input[type='radio'] {
+  display: none;    
+}    
+
+/* hide content by default */
+#accordion .content {
+  display:none;
 }
 
+/* Show content boxes when the radio buttons are checked */
+#accordion label + input[type='radio']:checked + .content {
+  display:block;
+  -webkit-transition: width 2s; /* Safari */
+
+}
+
+/**** Landing & Project ****/
+.name {
+  padding: 2vh 0 3vh 1vw;
+}
+
+.project {
+}
+
+#landing {
+  height: 100vh;
+}
+
+@media screen and (min-width: $break-medium) {
+  .name {
+    position: fixed;
+  }
+  
+  .project {
+    position: relative;
+    left: 22vw;
+    width: 78vw;
+  }
+
+  #landing {
+  }
+}
+
+/**** Images ****/
 .image-container {
   align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   margin-bottom: 2rem;
+  padding: 2rem 0 0 0;
 
   img {
       max-width: 65%;
@@ -36,31 +100,50 @@ p {
       height: auto;
   
       &:not(:last-child) {
-          margin-bottom: 2vh;
+        margin-bottom: 2vh;
       } 
    }
 }
 
-.landing {
-  height: 100vh;
-}
-
-.name {
-  padding: 2vh 0 2vh 2vh;
-}
-
-.project {
-}
+/**** Text ****/
 
 .text-container {
   display: flex;
   flex-direction: column;
   margin-bottom: 2rem;
   padding: 0 8vw 0 9vw;
-  text-align: center;
 
+  @media screen and (min-width: $break-medium) {
+    display: none;
+  } 
 }
 
 .title {
-  padding: 0 3vh 0 3vh;
+}
+
+.vertical-line{
+  border-left: 0.1rem solid grey;
+  width: .2rem; /* Use only border style */
+  height: 10vh;
+  display: block;
+  margin: 0 auto 3rem auto;
+
+  @media screen and (min-width: $break-medium) {
+    display: none;
+  }
+}
+
+.accordion {
+  display: none;
+
+  @media screen and (min-width: $break-medium) {
+    display: inline;
+    .text-container.desktop {
+      display: inline;
+
+    }
+    position: fixed;
+    padding: 8vh 0 0 1vw;
+    width: 15vw;
+  }
 }

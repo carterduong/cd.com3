@@ -273,21 +273,55 @@ html {
 color: white;
 background-color: black;
 font-size: 16px; }
+h1 {
+margin: 0 0 0 0;
+padding: 0 3vh 0 3vh; }
+@media screen and (min-width: 600px) {
+h1 {
+padding: 0 0 0 0; } }
 p {
 margin: 1rem 0 0 0; }
-.vertical-line {
-border-left: 0.1rem solid grey;
-width: .2rem;
-/* Use only border style */
-height: 10vh;
+/**** Accordion ****/
+#accordion {
+margin: 100px auto;
+padding: 0;
+width: 500px; }
+#accordion li {
+list-style: none;
+width: 100%; }
+#accordion li label {
+display: block; }
+/* Hide the radio buttons */
+#accordion label + input[type='radio'] {
+display: none; }
+/* hide content by default */
+#accordion .content {
+display: none; }
+/* Show content boxes when the radio buttons are checked */
+#accordion label + input[type='radio']:checked + .content {
 display: block;
-margin: 0 auto 3rem auto; }
+-webkit-transition: width 2s;
+/* Safari */ }
+/**** Landing & Project ****/
+.name {
+padding: 2vh 0 3vh 1vw; }
+#landing {
+height: 100vh; }
+@media screen and (min-width: 600px) {
+.name {
+position: fixed; }
+.project {
+position: relative;
+left: 22vw;
+width: 78vw; } }
+/**** Images ****/
 .image-container {
 align-items: center;
 display: flex;
 flex-direction: column;
 justify-content: space-evenly;
-margin-bottom: 2rem; }
+margin-bottom: 2rem;
+padding: 2rem 0 0 0; }
 .image-container img {
 max-width: 65%;
 height: auto; }
@@ -298,26 +332,49 @@ max-width: 70%;
 height: auto; }
 .image-container video:not(:last-child) {
 margin-bottom: 2vh; }
-.landing {
-height: 100vh; }
-.name {
-padding: 2vh 0 2vh 2vh; }
+/**** Text ****/
 .text-container {
 display: flex;
 flex-direction: column;
 margin-bottom: 2rem;
-padding: 0 8vw 0 9vw;
-text-align: center; }
-.title {
-padding: 0 3vh 0 3vh; }
+padding: 0 8vw 0 9vw; }
+@media screen and (min-width: 600px) {
+.text-container {
+display: none; } }
+.vertical-line {
+border-left: 0.1rem solid grey;
+width: .2rem;
+/* Use only border style */
+height: 10vh;
+display: block;
+margin: 0 auto 3rem auto; }
+@media screen and (min-width: 600px) {
+.vertical-line {
+display: none; } }
+.accordion {
+display: none; }
+@media screen and (min-width: 600px) {
+.accordion {
+display: inline;
+position: fixed;
+padding: 8vh 0 0 1vw;
+width: 15vw; }
+.accordion .text-container.desktop {
+display: inline; } }
 html {
 font-family: aktiv-grotesk, sans-serif;
 font-weight: 400;
 -webkit-font-smoothing: antialiased; }
-.title {
+h1 {
+font-weight: 400;
 font-size: 1.5rem;
 letter-spacing: -0.1rem;
 text-transform: uppercase; }
+.text-container {
+text-align: center; }
+@media screen and (min-width: 600px) {
+.text-container {
+text-align: left; } }
 .description-container {
 font-size: 13px; }
 .meta-text {

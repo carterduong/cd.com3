@@ -4,14 +4,26 @@ html {
   -webkit-font-smoothing: antialiased;
 }
 
-.title {
+h1 {
+  font-weight: 400;
   font-size: 1.5rem;
   letter-spacing: -0.1rem;
   text-transform: uppercase;
 }
+
+.text-container {
+  text-align: center;
+
+  @media screen and (min-width: $break-medium) {
+    text-align: left;
+  }
+}
+
+.title-text {
+}
+
 .description-container {
   font-size: 13px;
-
 }
 
 .meta-text {

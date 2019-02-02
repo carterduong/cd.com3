@@ -10,151 +10,256 @@
     <link rel="manifest" href="/manifest.webmanifest">
   </head>
   <body>
-    <div class="landing">
-      <div class="name">⟡ Carter Duong</div>
-      <div class="image-container">
-        <img src="assets/img/rectangle.svg">
-      </div>
-      <div class="text-container">
-        <span class="title">
-          INFO
-        </span>
-        <p class="description-container">
+    <ul class="accordion desktop" id="accordion">
+      <!-- Landing -->
+      <li>
+        <label for="info">Info</label>
+        <input type="radio" name="accordion" id="info" checked>
+        <div class="content">
           Carter Duong is a designer, developer, and artist from 
           the Bay Area and (soon to be) based in Los Angeles. 
           He recently graduated from UC San Diego with a B.A. 
-          in Interdisciplinary Computing and the Arts.
+          in Interdisciplinary Computing and the Arts.<br>
           <br>
-          <br>
-          EMAIL
-          <br>
-          ARE.NA
-          <br>
-          TUMBLR   
-        </p>
-      </div>
-    </div>
-    <div class="project">
-      <div class="image-container">
-        <img src="assets/img/fq1.png">
-      </div>
-      <div class="text-container">
-        <span class="title">
-          Fashion Quarterly
-        </span>
-        <span class="description-container">
-          <p class="meta-text">
+          <a>EMAIL</a><br>
+          <a>ARE.NA</a><br>
+          <a>TUMBLR</a>
+        </div>
+      </li>
+      <!-- Projects -->
+      <li>
+        <label for="Fashion Quarterly">Fashion Quarterly</label>
+        <input type="radio" name="accordion" id="Fashion Quarterly">
+        <div class="content">
+          <p class="meta-text sub-menu">
             Co-Editor, Art Direction, Design
             <br>
             2017–2018
             <br>
           </p>
-          <p class="description-text">
+          <p class="description-text sub-menu">
             A student-run publication that celebrates the intersection of style, art, and design at UC San Diego.
           </p>
-        </span>
+          <br>
+        </p>
       </div>
-      <div class="vertical-line"></div>
+    </li>
+    <li>
+      <label for="Heavy Friends">Heavy Friends</label>
+      <input type="radio" name="accordion" id="Heavy Friends">
+      <div class="content">
+        <p class="meta-text sub-menu">
+          Web Design, Development
+          <br>
+          April 2018
+          <br>
+        </p>
+        <p class="description-text sub-menu">
+          A microsite for a weekly radio show based out of KSDT at UC San Diego.
+        </p>
+        <br>
+      </p>
     </div>
-    <div class="project">
-      <div class="image-container">
-        <img src="assets/img/rectangle.svg">
-        <img src="assets/img/rectangle.svg">
-      </div>
-      <div class="text-container">
-        <span class="title">
-          tu.na
-        </span>
-        <span class="description-container">
-          <p class="meta-text">
-            Web Design, Development
-            <br>
-            August 2018
-            <br>
-          </p>
-          <p class="description-text">
-            A Chrome add-on developed to migrate Tumblr 'likes' to the Are.na platform.
-          </p>
-        </span>
-      </div>
-      <div class="vertical-line"></div>
-    </div>
-    <div class="project">
-      <div class="image-container">
-        <img src="assets/img/hffm-tear-small.png">
-        <img src="assets/img/iPhone_1.png">
-      </div>
-      <div class="text-container">
-        <span class="title">
-          Heavy Friends
-        </span>
-        <span class="description-container">
-          <p class="meta-text">
-            Web Design, Development
-            <br>
-            April 2018
-            <br>
-          </p>
-          <p class="description-text">
-            (with DJ ABG and DJ SAT -2400) was a weekly radio show based out of KSDT at UC San Diego.
-          </p>
-        </span>
-      </div>
-      <div class="vertical-line"></div>
-    </div>
-    <div class="project">
-      <div class="image-container">
-        <video src="assets/img/resume-1.mp4" autoplay muted loop></video>
-        <video src="assets/img/resume-2.mp4" autoplay muted loop></video>
-        <video src="assets/img/resume-3.mp4" autoplay muted loop></video>
-      </div>
-      <div class="text-container">
-        <span class="title">
-          Résumé
-        </span>
-        <span class="description-container">
-          <p class="meta-text">
-            Game Design, Development
-            <br>
-            November 2016
-            <br>
-          </p>
-          <p class="description-text">
-            is a game about being true to yourself.
-          </p>
-        </span>
-      </div>
-      <div class="vertical-line"></div>
-    </div>
-    <div class="project">
-      <div class="image-container">
-        <img src="assets/img/160.png">
-        <img src="assets/img/vis1@0,75x.png">
-        <img src="assets/img/rents@1x.png">
-      </div>
-      <div class="text-container">
-        <span class="title">
-          Extras
-        </span>
-        <span class="description-container">
-          <p class="meta-text">
-            <br>
-            2016–2018
-            <br>
-          </p>
-          <p class="description-text">
-          </p>
-        </span>
-      </div>
-      <div class="vertical-line"></div>
-    </div>
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/build/three.js"></script>
-    <script src="assets/js/curves/NURBSCurve.js"></script>
-    <script src="assets/js/curves/NURBSUtils.js"></script>
-    <script src="assets/js/renderers/Projector.js"></script>
-    <script src="assets/js/renderers/CanvasRenderer.js"></script>
-    <script src="assets/js/stats.min.js"></script>
-    <script src="assets/js/nurbs2.js"></script>
-  </body>
+  </li>
+  <li>
+    <label for="Résumé">Résumé</label>
+    <input type="radio" name="accordion" id="Résumé">
+    <div class="content">
+      <p class="meta-text sub-menu">
+        Game Design, Development
+        <br>
+        November 2016
+        <br>
+      </p>
+      <p class="description-text sub-menu">
+        A short game about being true to yourself.
+      </p>
+      <br>
+    </p>
+  </div>
+</li>
+<li>
+  <label for="Posters">Posters</label>
+  <input type="radio" name="accordion" id="Posters">
+  <div class="content">
+    <p class="meta-text sub-menu">
+    </p>
+    <p class="description-text sub-menu">
+    </p>
+    <br>
+  </p>
+</div>
+</li>
+<li>
+  <label for="Extras">Extras</label>
+  <input type="radio" name="accordion" id="Extras">
+  <div class="content">
+    <p class="meta-text sub-menu">
+    </p>
+    <p class="description-text sub-menu">
+    </p>
+    <br>
+  </p>
+</div>
+</li>
+</ul>
+<div class="name">⟡ Carter Duong</div>
+<div class="project" id="landing">
+  <div class="image-container">
+    <img src="assets/img/squiggle.png">
+  </div>
+  <div class="text-container">
+    <h1 class="title">
+      INFO
+    </h1>
+    <p class="description-container">
+      Carter Duong is a designer, developer, and artist from 
+      the Bay Area and (soon to be) based in Los Angeles. 
+      He recently graduated from UC San Diego with a B.A. 
+      in Interdisciplinary Computing and the Arts.
+      <br>
+      <br>
+      EMAIL
+      <br>
+      ARE.NA
+      <br>
+      TUMBLR   
+    </p>
+  </div>
+</div>
+<div class="vertical-line"></div>
+<div class="project">
+  <div class="image-container">
+    <img src="assets/img/fq15_cover.png">
+    <img src="assets/img/fq15_activewear.png">
+    <img src="assets/img/fq15_cosplay/cos.png">
+    <img src="assets/img/fq15_cosplay/cos5.png">
+  </div>
+  <div class="text-container">
+    <h1 class="title-text">
+      Fashion Quarterly
+    </h1>
+    <p class="meta-text">
+      Co-Editor, Art Direction, Design
+      <br>
+      2017–2018
+      <br>
+    </p>
+    <p class="description-text">
+      A student-run publication that celebrates the intersection of style, art, and design at UC San Diego.
+    </p>
+  </div>
+  <div class="vertical-line"></div>
+</div>
+<div class="project">
+  <div class="image-container">
+    <img src="assets/img/hffm-tear-small.png">
+    <img src="assets/img/iPhone_1.png">
+  </div>
+  <div class="text-container">
+    <h1 class="title-text">
+      Heavy Friends
+    </h1>
+    <p class="meta-text">
+      Web Design, Development
+      <br>
+      April 2018
+      <br>
+    </p>
+    <p class="description-text">
+      A microsite for a weekly radio show based out of KSDT at UC San Diego.
+    </p>
+  </div>
+  <div class="vertical-line"></div>
+</div>
+<div class="project">
+  <div class="image-container">
+    <video src="assets/img/resume-1.mp4" autoplay muted loop></video>
+    <video src="assets/img/resume-2.mp4" autoplay muted loop></video>
+    <video src="assets/img/resume-3.mp4" autoplay muted loop></video>
+  </div>
+  <div class="text-container">
+    <h1 class="title-text">
+      Résumé
+    </h1>
+    <p class="meta-text">
+      Game Design, Development
+      <br>
+      November 2016
+      <br>
+    </p>
+    <p class="description-text">
+      A short game about being true to yourself.
+    </p>
+  </div>
+  <div class="vertical-line"></div>
+</div>
+<div class="project">
+  <div class="image-container">
+    <img src="assets/img/160.png">
+  </div>
+  <div class="text-container">
+    <h1 class="title-text">
+      Posters
+    </h1>
+    <p class="meta-text">
+    </p>
+    <p class="description-text">
+    </p>
+  </div>
+  <div class="vertical-line"></div>
+</div>
+<div class="project">
+  <div class="image-container">
+    <img src="assets/img/vis1@0,75x.png">
+    <img src="assets/img/rents@1x.png">
+  </div>
+  <div class="text-container">
+    <h1 class="title-text">
+      Extras
+    </h1>
+    <p class="meta-text">
+    </p>
+    <p class="description-text">
+    </p>
+  </div>
+  <div class="vertical-line"></div>
+</div>
+<div class="landing" id="bottom">
+  <div class="name">⟡ Carter Duong</div>
+  <!-- sub with canvas -->
+  <div class="image-container">
+    <img src="assets/img/rectangle.svg">
+  </div>
+  <div class="text-container">
+    <h1 class="title">
+      INFO
+    </h1>
+    <p class="description-container">
+      Carter Duong is a designer, developer, and artist from 
+      the Bay Area and (soon to be) based in Los Angeles. 
+      He recently graduated from UC San Diego with a B.A. 
+      in Interdisciplinary Computing and the Arts.
+      <br>
+      <br>
+      EMAIL
+      <br>
+      GITHUB
+      <br>
+      ARE.NA
+      <br>
+      TUMBLR   
+    </p>
+  </div>
+</div>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/build/three.js"></script>
+<script src="assets/js/curves/NURBSCurve.js"></script>
+<script src="assets/js/curves/NURBSUtils.js"></script>
+<script src="assets/js/renderers/Projector.js"></script>
+<script src="assets/js/renderers/CanvasRenderer.js"></script>
+<script src="assets/js/stats.min.js"></script>
+<script src="assets/js/nurbs2.js"></script>
+<script src="assets/js/loop.js"></script>
+</body>
 </html>
