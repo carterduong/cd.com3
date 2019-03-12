@@ -14,10 +14,10 @@
       <!-- Landing -->
       <li>
         <label for="info">Info</label>
-        <input type="radio" name="accordion" id="info" checked>
+        <input type="radio" name="accordion" id="info" data-collapsed="true" checked>
         <div class="content">
           Carter Duong is a designer, developer, and artist from 
-          the Bay Area and (soon to be) based in Los Angeles. 
+          the Bay Area (510 + 925) and based in Los Angeles (626). 
           He recently graduated from UC San Diego with a B.A. 
           in Interdisciplinary Computing and the Arts.<br>
           <br>
@@ -29,7 +29,7 @@
       <!-- Projects -->
       <li>
         <label for="Fashion Quarterly">Fashion Quarterly</label>
-        <input type="radio" name="accordion" id="Fashion Quarterly">
+        <input type="radio" name="accordion" id="Fashion Quarterly" data-collapsed="true">
         <div class="content">
           <p class="meta-text sub-menu">
             Co-Editor, Art Direction, Design
@@ -46,7 +46,7 @@
     </li>
     <li>
       <label for="Heavy Friends">Heavy Friends</label>
-      <input type="radio" name="accordion" id="Heavy Friends">
+      <input type="radio" name="accordion" id="Heavy Friends" data-collapsed="true">
       <div class="content">
         <p class="meta-text sub-menu">
           Web Design, Development
@@ -63,7 +63,7 @@
   </li>
   <li>
     <label for="Résumé">Résumé</label>
-    <input type="radio" name="accordion" id="Résumé">
+    <input type="radio" name="accordion" id="Résumé" data-collapsed="true">
     <div class="content">
       <p class="meta-text sub-menu">
         Game Design, Development
@@ -80,7 +80,7 @@
 </li>
 <li>
   <label for="Posters">Posters</label>
-  <input type="radio" name="accordion" id="Posters">
+  <input type="radio" name="accordion" id="Posters" data-collapsed="true">
   <div class="content">
     <p class="meta-text sub-menu">
     </p>
@@ -92,7 +92,7 @@
 </li>
 <li>
   <label for="Extras">Extras</label>
-  <input type="radio" name="accordion" id="Extras">
+  <input type="radio" name="accordion" id="Extras" data-collapsed="true">
   <div class="content">
     <p class="meta-text sub-menu">
     </p>
@@ -114,7 +114,7 @@
     </h1>
     <p class="description-container">
       Carter Duong is a designer, developer, and artist from 
-      the Bay Area and (soon to be) based in Los Angeles. 
+      the Bay Area (510 + 925) and based in Los Angeles (626). 
       He recently graduated from UC San Diego with a B.A. 
       in Interdisciplinary Computing and the Arts.
       <br>
@@ -252,7 +252,9 @@
     </p>
   </div>
 </div>
-<script src="assets/js/main.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="assets/js/accordion.js"></script>
+<!--
 <script src="assets/js/build/three.js"></script>
 <script src="assets/js/curves/NURBSCurve.js"></script>
 <script src="assets/js/curves/NURBSUtils.js"></script>
@@ -261,5 +263,6 @@
 <script src="assets/js/stats.min.js"></script>
 <script src="assets/js/nurbs2.js"></script>
 <script src="assets/js/loop.js"></script>
+-->
 </body>
 </html>

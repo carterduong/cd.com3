@@ -3,10 +3,10 @@
   <!-- Landing -->
   <li>
     <label for="info">Info</label>
-    <input type="radio" name="accordion" id="info" checked>
+    <input type="radio" name="accordion" id="info" data-collapsed="true" checked>
     <div class="content">
       Carter Duong is a designer, developer, and artist from 
-      the Bay Area and (soon to be) based in Los Angeles. 
+      the Bay Area (510 + 925) and based in Los Angeles (626). 
       He recently graduated from UC San Diego with a B.A. 
       in Interdisciplinary Computing and the Arts.<br><br>
       <a>EMAIL</a><br>
@@ -19,7 +19,7 @@
   {% for project in site.data.projects %}
   <li>
     <label for="{{project.title}}">{{project.title}}</label>
-    <input type="radio" name="accordion" id="{{project.title}}">
+    <input type="radio" name="accordion" id="{{project.title}}" data-collapsed="true">
     <div class="content">
         <p class="meta-text sub-menu">
             {%if project.role %}

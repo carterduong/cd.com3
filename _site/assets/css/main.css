@@ -285,7 +285,7 @@ margin: 1rem 0 0 0; }
 #accordion {
 margin: 100px auto;
 padding: 0;
-width: 500px; }
+width: 22vw; }
 #accordion li {
 list-style: none;
 width: 100%; }
@@ -296,12 +296,18 @@ display: block; }
 display: none; }
 /* hide content by default */
 #accordion .content {
-display: none; }
+max-height: 0;
+-webkit-transition: max-height 1s linear, opacity 1s;
+/* Safari */
+overflow: hidden;
+opacity: 0; }
 /* Show content boxes when the radio buttons are checked */
 #accordion label + input[type='radio']:checked + .content {
-display: block;
--webkit-transition: width 2s;
-/* Safari */ }
+height: auto;
+max-height: 280px;
+-webkit-transition: max-height 1s linear, opacity 1s;
+/* Safari */
+opacity: 1; }
 /**** Landing & Project ****/
 .name {
 padding: 2vh 0 3vh 1vw; }
