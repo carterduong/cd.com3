@@ -19,11 +19,15 @@ p {
   margin: 1rem 0 0 0;
 }
 
+a {
+  color: white;
+}
+
 /**** Accordion ****/
 #accordion {
-  margin:100px auto;
-  padding:0;
-  width:22vw;
+  top: 35vh;
+  padding: 0 1vw 0 1vw;
+  width: 17vw;
 }    
 
 #accordion li {
@@ -33,10 +37,6 @@ p {
 
 #accordion li label {
   display:block;
-}    
-/* Hide the radio buttons */
-#accordion label + input[type='radio'] {
-  display: none;    
 }    
 
 /* hide content by default */
@@ -48,6 +48,11 @@ p {
   opacity: 0;
 }
 
+/* Hide the radio buttons */
+#accordion label + input[type='radio'] {
+  display: none;    
+}    
+
 /* Show content boxes when the radio buttons are checked */
 #accordion label + input[type='radio']:checked + .content {
   height: auto;
@@ -55,33 +60,81 @@ p {
   -webkit-transition: max-height 1s linear,
                       opacity 1s; /* Safari */
   opacity: 1;
-
 }
 
-/**** Landing & Project ****/
-.name {
-  padding: 2vh 0 3vh 1vw;
+@keyframes pulse {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
+/**** Folio ****/
+.folio { 
+  position: fixed;
+
+  &#header {
+    left: 1vw;
+    top: 1vh;
+  }
+
+  &#contact {
+    right: 1vw;
+    top: 1vh;
+  }
+
+  &#time {
+    left: 1vw;
+    bottom: 1vh;
+  }
+
+  &#easter-egg {
+    right: 1vw;
+    bottom: 1vh;
+  }
+}
+
+/**** Project Template ****/
 .project {
 }
 
-#landing {
-  height: 100vh;
-}
 
-@media screen and (min-width: $break-medium) {
-  .name {
-    position: fixed;
-  }
-  
+@media screen and (min-width: $break-medium) {  
   .project {
     position: relative;
-    left: 22vw;
-    width: 78vw;
+    margin: auto;
+    width: 50vw;
   }
 
   #landing {
+    display: flex;
+    height: 100vh;
+  }
+}
+
+.fadeIn {
+  -webkit-animation: opacityUp 3s;
+  opacity: 1.0;
+  -webkit-opacity: 1.0;
+}
+
+@-webkit-keyframes opacityUp {
+  0% { 
+      opacity: 0.0;
+      -webkit-opacity: 0.0;
+  }
+  7% {
+      opacity: 0.0;
+      -webkit-opacity: 0.0;
+  }
+  100% { 
+      opacity: 1.0;
+      -webkit-opacity: 1.0;
   }
 }
 
@@ -95,22 +148,22 @@ p {
   padding: 2rem 0 0 0;
 
   img {
-      max-width: 65%;
-      height: auto;
-  
-      &:not(:last-child) {
-          margin-bottom: 1rem;
-      }
+    max-width: 65%;
+    height: auto;
+
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
   }
 
   video {
-      max-width: 70%;
-      height: auto;
-  
-      &:not(:last-child) {
-        margin-bottom: 2vh;
-      } 
-   }
+    max-width: 70%;
+    height: auto;
+
+    &:not(:last-child) {
+      margin-bottom: 2vh;
+    } 
+}
 }
 
 /**** Text ****/
@@ -127,6 +180,10 @@ p {
 }
 
 .title {
+}
+
+.label {
+
 }
 
 .vertical-line{

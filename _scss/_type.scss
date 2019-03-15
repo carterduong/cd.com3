@@ -1,7 +1,8 @@
 html {
-  font-family: aktiv-grotesk, sans-serif;
+  font-family: Helvetica, sans-serif;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
+  font-size: .9em;
 }
 
 h1 {
@@ -19,18 +20,26 @@ h1 {
   }
 }
 
-.title-text {
+.folio {
+  @media screen and (min-width: $break-medium) {
+    font-size: 1.4rem;
+    letter-spacing: -0.07rem;
+  }
 }
 
-.description-container {
-  font-size: 13px;
+.content {
+  font-size: .8rem;
+  line-height: 1.1rem;
 }
-
 .meta-text {
   text-transform: uppercase;
 }
 
-.name {
+.header {
   font-size: 1.8rem;
   letter-spacing: -0.1rem;
+}
+
+label {
+  text-transform: uppercase;
 }

@@ -281,19 +281,18 @@ h1 {
 padding: 0 0 0 0; } }
 p {
 margin: 1rem 0 0 0; }
+a {
+color: white; }
 /**** Accordion ****/
 #accordion {
-margin: 100px auto;
-padding: 0;
-width: 22vw; }
+top: 35vh;
+padding: 0 1vw 0 1vw;
+width: 17vw; }
 #accordion li {
 list-style: none;
 width: 100%; }
 #accordion li label {
 display: block; }
-/* Hide the radio buttons */
-#accordion label + input[type='radio'] {
-display: none; }
 /* hide content by default */
 #accordion .content {
 max-height: 0;
@@ -301,6 +300,9 @@ max-height: 0;
 /* Safari */
 overflow: hidden;
 opacity: 0; }
+/* Hide the radio buttons */
+#accordion label + input[type='radio'] {
+display: none; }
 /* Show content boxes when the radio buttons are checked */
 #accordion label + input[type='radio']:checked + .content {
 height: auto;
@@ -308,18 +310,51 @@ max-height: 280px;
 -webkit-transition: max-height 1s linear, opacity 1s;
 /* Safari */
 opacity: 1; }
-/**** Landing & Project ****/
-.name {
-padding: 2vh 0 3vh 1vw; }
-#landing {
-height: 100vh; }
-@media screen and (min-width: 600px) {
-.name {
+@keyframes pulse {
+0% {
+opacity: 0; }
+50% {
+opacity: 1; }
+100% {
+opacity: 0; } }
+/**** Folio ****/
+.folio {
 position: fixed; }
+.folio#header {
+left: 1vw;
+top: 1vh; }
+.folio#contact {
+right: 1vw;
+top: 1vh; }
+.folio#time {
+left: 1vw;
+bottom: 1vh; }
+.folio#easter-egg {
+right: 1vw;
+bottom: 1vh; }
+/**** Project Template ****/
+@media screen and (min-width: 600px) {
 .project {
 position: relative;
-left: 22vw;
-width: 78vw; } }
+margin: auto;
+width: 50vw; }
+#landing {
+display: flex;
+height: 100vh; } }
+.fadeIn {
+-webkit-animation: opacityUp 3s;
+opacity: 1.0;
+-webkit-opacity: 1.0; }
+@-webkit-keyframes opacityUp {
+0% {
+opacity: 0.0;
+-webkit-opacity: 0.0; }
+7% {
+opacity: 0.0;
+-webkit-opacity: 0.0; }
+100% {
+opacity: 1.0;
+-webkit-opacity: 1.0; } }
 /**** Images ****/
 .image-container {
 align-items: center;
@@ -368,9 +403,10 @@ width: 15vw; }
 .accordion .text-container.desktop {
 display: inline; } }
 html {
-font-family: aktiv-grotesk, sans-serif;
+font-family: Helvetica, sans-serif;
 font-weight: 400;
--webkit-font-smoothing: antialiased; }
+-webkit-font-smoothing: antialiased;
+font-size: .9em; }
 h1 {
 font-weight: 400;
 font-size: 1.5rem;
@@ -381,10 +417,17 @@ text-align: center; }
 @media screen and (min-width: 600px) {
 .text-container {
 text-align: left; } }
-.description-container {
-font-size: 13px; }
+@media screen and (min-width: 600px) {
+.folio {
+font-size: 1.4rem;
+letter-spacing: -0.07rem; } }
+.content {
+font-size: .8rem;
+line-height: 1.1rem; }
 .meta-text {
 text-transform: uppercase; }
-.name {
+.header {
 font-size: 1.8rem;
 letter-spacing: -0.1rem; }
+label {
+text-transform: uppercase; }

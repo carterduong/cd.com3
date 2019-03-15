@@ -1,66 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
     {% include head.html %}
-    
-    <body>
+    <body class="fadeIn">
+      <div class="folio" id="header">⟡ Carter Duong</div>
+      <div class="folio" id="contact">Contact</div>
+      <div class="folio" id="time">Published 1/22/19</div>
+      <div class="folio" id="easter-egg">All ways, always.</div>
+
       {% include accordion.html %}
-      
-      <div class="name">⟡ Carter Duong</div>
-      <div class="project" id="landing">
-        <div class="image-container">
-          <img src="assets/img/squiggle.png">
-        </div>
-        <div class="text-container">
-          <h1 class="title">
-            INFO
-          </h1>
-          <p class="description-container">
-            Carter Duong is a designer, developer, and artist from 
-            the Bay Area (510 + 925) and based in Los Angeles (626). 
-            He recently graduated from UC San Diego with a B.A. 
-            in Interdisciplinary Computing and the Arts.
-            <br><br>
-            EMAIL
-            <br>
-            ARE.NA
-            <br>
-            TUMBLR   
-          </p>
-        </div>
-      </div>
-
-      <div class="vertical-line"></div>
-
       {% include projects.html %}
-
-      <div class="landing" id="bottom">
-          <div class="name">⟡ Carter Duong</div>
-          <!-- sub with canvas -->
-          <div class="image-container">
-            <img src="assets/img/rectangle.svg">
-          </div>
-          <div class="text-container">
-            <h1 class="title">
-              INFO
-            </h1>
-            <p class="description-container">
-                Carter Duong is a designer, developer, and artist from 
-                the Bay Area and (soon to be) based in Los Angeles. 
-                He recently graduated from UC San Diego with a B.A. 
-                in Interdisciplinary Computing and the Arts.
-                <br><br>
-                EMAIL
-                <br>
-                GITHUB
-                <br>
-                ARE.NA
-                <br>
-                TUMBLR   
-            </p>
-          </div>
-        </div>
-        
-        
       {% include js.html %}
     </body>
 </html>
