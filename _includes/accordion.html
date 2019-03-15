@@ -2,8 +2,8 @@
 
   <!-- Landing -->
   <li>
+    <input type="radio" name="accordion" id="info">
     <label for="info">Info</label>
-    <input type="radio" name="accordion" id="info" data-collapsed="true" checked>
     <div class="content">
       Carter Duong is a designer, developer, and artist from 
       the Bay Area<sup><a href>1</a>+<a href>2</a></sup> and based in Los Angeles<sup><a href>3</a></sup>. 
@@ -15,11 +15,30 @@
     </div>
   </li>
 
+  <li>
+    <input type="radio" name="accordion" id="test">
+    <label for="test">Test</label>
+    <div class="content">
+      <p class="description-container">
+          Carter Duong is a designer, developer, and artist from 
+          the Bay Area <sup>(510 + 925)</sup> and based in Los Angeles (626). 
+          He recently graduated from UC San Diego with a B.A. 
+          in Interdisciplinary Computing and the Arts.
+          <br><br>
+          EMAIL
+          <br>
+          ARE.NA
+          <br>
+          TUMBLR   
+        </p>
+    </div>
+  </li>
+
   <!-- Projects -->
   {% for project in site.data.projects %}
   <li>
+    <input type="radio" name="accordion" id="{{project.title}}">
     <label for="{{project.title}}">{{project.title}}</label>
-    <input type="radio" name="accordion" id="{{project.title}}" data-collapsed="true">
     <div class="content">
         <p class="meta-text sub-menu">
             {%if project.role %}

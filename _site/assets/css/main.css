@@ -293,18 +293,17 @@ list-style: none;
 width: 100%; }
 #accordion li label {
 display: block; }
-/* hide content by default */
 #accordion .content {
 max-height: 0;
 -webkit-transition: max-height 1s linear, opacity 1s;
 /* Safari */
 overflow: hidden;
 opacity: 0; }
-/* Hide the radio buttons */
-#accordion label + input[type='radio'] {
+#accordion input[type='radio'] {
 display: none; }
-/* Show content boxes when the radio buttons are checked */
-#accordion label + input[type='radio']:checked + .content {
+#accordion input[type='radio']:checked + label {
+animation: pulse 2s infinite; }
+#accordion input[type='radio']:checked ~ .content {
 height: auto;
 max-height: 280px;
 -webkit-transition: max-height 1s linear, opacity 1s;
@@ -312,11 +311,14 @@ max-height: 280px;
 opacity: 1; }
 @keyframes pulse {
 0% {
-opacity: 0; }
+opacity: 0;
+text-shadow: 0px 0px 5px white; }
 50% {
-opacity: 1; }
+opacity: 1;
+text-shadow: 0x 0px 5px white; }
 100% {
-opacity: 0; } }
+opacity: 0;
+text-shadow: 0px 0px 5px white; } }
 /**** Folio ****/
 .folio {
 position: fixed; }
