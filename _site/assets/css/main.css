@@ -284,26 +284,26 @@ margin: 1rem 0 0 0; }
 a {
 color: white; }
 /**** Accordion ****/
-#accordion {
+.accordion {
 top: 35vh;
 padding: 0 1vw 0 1vw;
 width: 17vw; }
-#accordion li {
+.accordion li {
 list-style: none;
 width: 100%; }
-#accordion li label {
+.accordion li label {
 display: block; }
-#accordion .content {
+.accordion .content {
 max-height: 0;
 -webkit-transition: max-height 1s linear, opacity 1s;
 /* Safari */
 overflow: hidden;
 opacity: 0; }
-#accordion input[type='radio'] {
+.accordion input[type='radio'] {
 display: none; }
-#accordion input[type='radio']:checked + label {
-animation: pulse 2s infinite; }
-#accordion input[type='radio']:checked ~ .content {
+.accordion input[type='radio']:checked + label {
+animation: pulse 3s infinite; }
+.accordion input[type='radio']:checked ~ .content {
 height: auto;
 max-height: 280px;
 -webkit-transition: max-height 1s linear, opacity 1s;

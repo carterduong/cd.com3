@@ -24,23 +24,23 @@ a {
 }
 
 /**** Accordion ****/
-#accordion {
+.accordion {
   top: 35vh;
   padding: 0 1vw 0 1vw;
   width: 17vw;
 }    
 
-#accordion li {
+.accordion li {
   list-style:none;
   width:100%;
 }    
 
-#accordion li label {
+.accordion li label {
   display:block;
 }    
 
 // hide content by default
-#accordion .content {
+.accordion .content {
   max-height: 0;
   -webkit-transition: max-height 1s linear,
                       opacity 1s; /* Safari */
@@ -49,17 +49,17 @@ a {
 }
 
 // hide radio button
-#accordion input[type='radio'] {
+.accordion input[type='radio'] {
   display: none;    
 }    
 
 // pulse active label
-#accordion input[type='radio']:checked + label {
-  animation: pulse 2s infinite;
+.accordion input[type='radio']:checked + label {
+  animation: pulse 3s infinite;
 }    
 
 // expand active content
-#accordion input[type='radio']:checked ~ .content {
+.accordion input[type='radio']:checked ~ .content {
   height: auto;
   max-height: 280px;
   -webkit-transition: max-height 1s linear,
