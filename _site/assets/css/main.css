@@ -347,6 +347,10 @@ height: 100vh; } }
 -webkit-animation: opacityUp 3s;
 opacity: 1.0;
 -webkit-opacity: 1.0; }
+.fadeOut {
+-webkit-animation: opacityUp 1s reverse;
+opacity: 1.0;
+-webkit-opacity: 1.0; }
 @-webkit-keyframes opacityUp {
 0% {
 opacity: 0.0;

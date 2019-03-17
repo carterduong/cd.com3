@@ -1,6 +1,6 @@
 // inital animation
 document.getElementById("info").checked = true;
-
+/*
 function scrollTo(element, to, duration) {
   if (duration <= 0) return;
   var difference = to - element.scrollTop;
@@ -12,7 +12,7 @@ function scrollTo(element, to, duration) {
       scrollTo(element, to, duration - 10);
   }, 10);
 }
-
+*/
 // add eventlistener to each label
 // eventlistener
 // get pixel location of the top of each project
@@ -27,17 +27,27 @@ for (var i = 0; i < inputs.length; i++) {
 
 function scroll(element, to, duration) {
   return function() {
-    console.log(to);    
+    console.log(to);
+
     column[0].classList.add("fadeIn");
-    
+
     if (duration <= 0) return;
     var difference = to - element.scrollTop;
     var perTick = difference / duration * 10;
 
+    window.scrollTo(0, to);
+    /*
     setTimeout(function() {
       element.scrollTop = element.scrollTop + perTick;
       if (element.scrollTop === to) return;
       scrollTo(element, to, duration - 10);
     }, 10);
+    */
+
+    setTimeout(function() {
+      column[0].classList.remove("fadeIn");
+      column[0].classList.remove("fadeIn");
+    }, 3000);
   };
 }
+
