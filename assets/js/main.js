@@ -2,40 +2,47 @@
 document.getElementById("info").checked = true;
 
 var inputs = document.querySelectorAll("label");
-var projects = document.querySelectorAll(".project");
-var column = document.getElementsByClassName("projects-container");
+var project_divs = document.querySelectorAll(".project");
+var projects_column = document.getElementsByClassName("projects-container");
 
 window.addEventListener('resize', function() {
   for (var i = 0; i < inputs.length; i++) {
-    var projectYPos = projects[i].offsetTop;
+    var projectYPos = project_divs[i].offsetTop;
     console.log("resize" + i + ": " + projectYPos);
     inputs[i].addEventListener("click", scroll(document.body, projectYPos, 10), false);
   }
 });
 
 for (var i = 0; i < inputs.length; i++) {
-  var projectYPos = projects[i].offsetTop;
-  console.log(projects[i].offsetParent + " " + projectYPos);
-  inputs[i].addEventListener("click", scroll(document.body, projects[i], 10), false);
+  var projectYPos = project_divs[i].offsetTop;
+  inputs[i].addEventListener("click", scroll(document.body, project_divs[i], 10), false);
 }
 
 function scroll(element, destination, duration) {
   return function() {
-    console.log(destination);
+    projects_column[0].classList.add("fadeIn");
     
-    column[0].classList.add("fadeIn");
+    if (destination.offsetHeight > window.innerHeight) {
+      setTimeout(function() {
+        destination.scrollIntoView();
+      }, 100);
+    } else {
+      var distanceToCenter = (window.innerHeight - destination.offsetHeight) / 2;
+      setTimeout(function() {
+        element.scrollTop = destination.offsetTop - distanceToCenter;
+      }, 100);
+    }
 
     setTimeout(function() {
-      destination.scrollIntoView(true);
-    }, 100);
-
-    setTimeout(function() {
-      column[0].classList.remove("fadeIn");
+      projects_column[0].classList.remove("fadeIn");
     }, 2700);
   };
 }
 
 /*
-if bigger that 100vh, go to div's offsetTop
-else center the first image in the project
+if bigger that 100vh
+  go to div's offsetTop
+else 
+  calculate div height
+
 */
