@@ -33,6 +33,9 @@ a {
 .accordion li {
   list-style:none;
   width:100%;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translateZ(0) scale(1.0, 1.0);
+  transform: translateZ(0);
 }    
 
 .accordion li label {
@@ -56,7 +59,7 @@ a {
 // pulse active label
 .accordion input[type='radio']:checked + label {
   animation: pulse 3s infinite;
-}    
+} 
 
 // expand active content
 .accordion input[type='radio']:checked ~ .content {
@@ -138,6 +141,7 @@ a {
   -webkit-animation: opacityUp 1s reverse;
   opacity: 1.0;
   -webkit-opacity: 1.0;
+  
 }
 
 @-webkit-keyframes opacityUp {
@@ -179,12 +183,16 @@ a {
 
     &:not(:last-child) {
       margin-bottom: 2vh;
-    } 
+    }   
+  }
 }
+
+#canvas-container {
+  width: 500px;
+  height: 500px;
 }
 
 /**** Text ****/
-
 .text-container {
   display: flex;
   flex-direction: column;

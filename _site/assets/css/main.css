@@ -290,7 +290,10 @@ padding: 0 1vw 0 1vw;
 width: 17vw; }
 .accordion li {
 list-style: none;
-width: 100%; }
+width: 100%;
+-webkit-backface-visibility: hidden;
+-webkit-transform: translateZ(0) scale(1, 1);
+transform: translateZ(0); }
 .accordion li label {
 display: block; }
 .accordion .content {
@@ -379,6 +382,9 @@ max-width: 70%;
 height: auto; }
 .image-container video:not(:last-child) {
 margin-bottom: 2vh; }
+#canvas-container {
+width: 500px;
+height: 500px; }
 /**** Text ****/
 .text-container {
 display: flex;

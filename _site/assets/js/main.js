@@ -15,13 +15,8 @@ for (var i = 0; i < inputs.length; i++) {
 }
 
 window.addEventListener('scroll', function() {
-  // for each project
-  //  determine visible height
-  //  if bigger than prev height set as new biggest
-  // if prev checked != newest polled div
-  //  set current div as checked
   var max = 0;
-  var currIndex, prevIndex = -1;
+  var max, currIndex, prevIndex = -1;
 
   for (var i = 0; i < project_divs.length; i++) {
     curr_px = pixelsInViewport(project_divs[i]);
@@ -34,10 +29,8 @@ window.addEventListener('scroll', function() {
   if (currIndex != prevIndex) {
     inputs[currIndex].checked = true;
     prevIndex = currIndex;
-  } 
-
+  }
   console.log(currIndex);
-
 });
 
 window.addEventListener('resize', function() {
