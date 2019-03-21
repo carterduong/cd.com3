@@ -50,17 +50,16 @@ a {
 
 .accordion li label {
   color: $grey;
-}
 
-.accordion li label:hover {
-  cursor: pointer;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 // hide content by default
 .accordion .content {
   max-height: 0;
-  -webkit-transition: max-height 1s linear,
-                      opacity 1s; /* Safari */
+  -webkit-transition: max-height 1s linear, opacity 1s;
   overflow: hidden;
   opacity: 0;
 }
@@ -80,8 +79,7 @@ a {
 .accordion input[type='radio']:checked ~ .content {
   height: auto;
   max-height: 280px;
-  -webkit-transition: max-height 1s linear,
-                      opacity 1s; /* Safari */
+  -webkit-transition: max-height 1s linear, opacity 1s;
   opacity: 1;
   color: $white;
 }   
@@ -221,13 +219,6 @@ a {
   @media screen and (min-width: $break-medium) {
     display: none;
   } 
-}
-
-.title {
-}
-
-.label {
-
 }
 
 .vertical-line{

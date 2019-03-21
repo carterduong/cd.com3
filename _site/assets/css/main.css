@@ -306,7 +306,6 @@ cursor: pointer; }
 .accordion .content {
 max-height: 0;
 -webkit-transition: max-height 1s linear, opacity 1s;
-/* Safari */
 overflow: hidden;
 opacity: 0; }
 .accordion input[type='radio'] {
@@ -318,7 +317,6 @@ color: #FFFFFF; }
 height: auto;
 max-height: 280px;
 -webkit-transition: max-height 1s linear, opacity 1s;
-/* Safari */
 opacity: 1;
 color: #FFFFFF; }
 @keyframes pulse {
