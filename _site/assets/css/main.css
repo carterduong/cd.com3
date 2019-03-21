@@ -375,6 +375,13 @@ opacity: 0.0;
 opacity: 1.0;
 -webkit-opacity: 1.0; } }
 /**** Images ****/
+#canvas-container {
+position: absolute;
+top: 0;
+left: 0;
+z-index: -1;
+width: 98vw;
+height: 100vh; }
 .image-container {
 align-items: center;
 display: flex;
@@ -392,9 +399,6 @@ max-width: 70%;
 height: auto; }
 .image-container video:not(:last-child) {
 margin-bottom: 2vh; }
-.image-container #canvas-container {
-width: 50vw;
-height: 50vh; }
 /**** Text ****/
 .text-container {
 display: flex;

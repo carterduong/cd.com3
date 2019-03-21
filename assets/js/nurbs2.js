@@ -20,7 +20,7 @@ animate();
 function init() {
     container = document.getElementById('canvas-container');
     camera = new THREE.PerspectiveCamera( 50, window.innerWidth / window.innerHeight, 1, 1000 );
-    camera.position.set( 0, 150, 500 );
+    camera.position.set( 0, 150, 700 );
     scene = new THREE.Scene();
     scene.background = new THREE.Color( 0x000000 );
     group = new THREE.Group();
@@ -40,7 +40,7 @@ function init() {
                 Math.random() * 400 - 200,
                 Math.random() * 400,
                 Math.random() * 400 - 200,
-                1 // weight of control point: higher means stronger attraction
+                10 // weight of control point: higher means stronger attraction
             )
         );
         var knot = ( i + 1 ) / ( j - nurbsDegree );
@@ -141,5 +141,46 @@ function animate() {
 
 function render() {
     group.rotation.y += ( targetRotation - group.rotation.y ) * 0.05;
+    generateCurve();
     renderer.render( scene, camera );
+}
+
+function generateCurve() {
+}
+
+
+function ggggggenerateCurve() {
+  var nurbsControlPoints = [];
+  var nurbsKnots = [];
+  var nurbsDegree = 3;
+  
+  for ( var i = 0; i <= nurbsDegree; i ++ ) {
+      nurbsKnots.push( 0 );
+  }
+  for ( var i = 0, j = 20; i < j; i ++ ) {
+      nurbsControlPoints.push(
+          new THREE.Vector4(
+              Math.random() * 400 - 200,
+              Math.random() * 400,
+              Math.random() * 400 - 200,
+              10 // weight of control point: higher means stronger attraction
+          )
+      );
+      var knot = ( i + 1 ) / ( j - nurbsDegree );
+      nurbsKnots.push( THREE.Math.clamp( knot, 0, 1 ) );
+  }
+
+  var nurbsCurve = new THREE.NURBSCurve( nurbsDegree, nurbsKnots, nurbsControlPoints );
+  var nurbsGeometry = new THREE.BufferGeometry();
+  nurbsGeometry.setFromPoints( nurbsCurve.getPoints( 200 ) );
+  var nurbsMaterial = new THREE.LineBasicMaterial( { linewidth: 5, color: 0xFFFFFF } );
+  var nurbsLine = new THREE.Line( nurbsGeometry, nurbsMaterial );
+  nurbsLine.position.set( 0, - 100, 0 );
+  group.add( nurbsLine );
+  var nurbsControlPointsGeometry = new THREE.BufferGeometry();
+  nurbsControlPointsGeometry.setFromPoints( nurbsCurve.controlPoints );
+  var nurbsControlPointsMaterial = new THREE.LineBasicMaterial( { linewidth: 2, color: 0x777777, opacity: 0.0 } ); // CONTROL POINTS
+  var nurbsControlPointsLine = new THREE.Line( nurbsControlPointsGeometry, nurbsControlPointsMaterial );
+  nurbsControlPointsLine.position.copy( nurbsLine.position );
+  group.add( nurbsControlPointsLine );
 }

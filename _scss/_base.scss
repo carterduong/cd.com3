@@ -27,7 +27,6 @@ a {
 }
 
 /**** Accordion ****/
-
 .accordion {
   display: none;
 
@@ -73,7 +72,7 @@ a {
 .accordion input[type='radio']:checked + label {
   animation: pulse 3s infinite;
   color: $white;
-} 
+}
 
 // expand active content
 .accordion input[type='radio']:checked ~ .content {
@@ -82,7 +81,7 @@ a {
   -webkit-transition: max-height 1s linear, opacity 1s;
   opacity: 1;
   color: $white;
-}   
+}
 
 @keyframes pulse {
   0% {
@@ -177,6 +176,15 @@ a {
 }
 
 /**** Images ****/
+#canvas-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 98vw;
+  height: 100vh;
+} 
+
 .image-container {
   align-items: center;
   display: flex;
@@ -202,11 +210,6 @@ a {
       margin-bottom: 2vh;
     }   
   }
-
-  #canvas-container {
-    width: 50vw;
-    height: 50vh;
-  } 
 }
 
 /**** Text ****/
