@@ -1,11 +1,11 @@
 - Fashion Quarterly: 
   title: Fashion Quarterly
   link:
-  date: 2017–2018
+  date: 2017–2019
   role: Co-Editor, Art Direction, Design
-  description: A student-run publication that celebrates the intersection of style, art, and design at UC San Diego.
+  description: A student-run publication that explores the culture of style, art, and design at UC San Diego.
   images:
-    - assets/img/fq319024.jpg
+    - assets/img/fq319039.png
     - assets/img/fq15_cover.png
     - assets/img/fq15_activewear.png
     - assets/img/fq15_cosplay/cos.png
@@ -32,14 +32,16 @@
 
 - Posters:
   title: Posters
-  images:
+  date: 2018–2019
+  description: Miscellaneous sketches in 3D and 2D.
+  images: 
     - assets/img/160.png
 
 - Extras: 
   title: Extras
   date:
   role:
-  description:
+  description: 
   images:
     - assets/img/vis1@0,75x.png
-    - assets/img/rents@1x.png 
+    - assets/img/rents@1x.png
