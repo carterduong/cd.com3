@@ -283,12 +283,14 @@ p {
 margin: 1rem 0 0 0; }
 a {
 color: white; }
+.clickable:hover {
+cursor: pointer; }
 /**** Accordion ****/
 .accordion {
 display: none; }
 @media screen and (min-width: 600px) {
 .accordion {
-display: inline-block;
+display: block;
 position: fixed;
 padding: 8vh 0 0 1vw;
 width: 15vw;
@@ -301,8 +303,6 @@ width: 100%;
 transform: translateZ(0); }
 .accordion li label {
 color: #A9A9A9; }
-.accordion li label:hover {
-cursor: pointer; }
 .accordion .content {
 max-height: 0;
 -webkit-transition: max-height 1s linear, opacity 1s;
@@ -331,7 +331,8 @@ opacity: .3;
 text-shadow: 0px 0px 5px white; } }
 /**** Folio ****/
 .folio {
-position: fixed; }
+position: fixed;
+z-index: 9999999; }
 .folio#header {
 left: 1vw;
 top: 1vh; }
@@ -351,10 +352,6 @@ color: #A9A9A9; }
 .project {
 position: relative;
 margin: auto;
-width: 50vw; }
-#landing {
-display: flex;
-height: 100vh;
 width: 50vw; } }
 .fadeIn {
 -webkit-animation: opacityUp 3s;
@@ -382,6 +379,9 @@ left: 0;
 z-index: -1;
 width: 98vw;
 height: 100vh; }
+#mobile-landing {
+height: 100vh;
+width: 100vw; }
 .image-container {
 align-items: center;
 display: flex;

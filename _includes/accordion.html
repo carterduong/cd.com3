@@ -3,7 +3,7 @@
   <!-- Landing -->
   <li>
     <input type="radio" name="projects-menu" id="info">
-    <label for="info">Info</label>
+    <label for="info" class="clickable">Info</label>
     <div class="content">
       Carter Duong is a designer, developer, and artist from 
         the Bay Area<sup><a href="https://goo.gl/maps/cKExn6muhyq" target="_blank">1</a>+<a href="https://goo.gl/maps/VHi9HtWjcHs" target="_blank">2</a></sup> 
@@ -17,7 +17,7 @@
   {% for project in site.data.projects %}
   <li>
     <input type="radio" name="projects-menu" id="{{project.title}}">
-    <label for="{{project.title}}">{{project.title}}</label>
+    <label for="{{project.title}}" class="clickable">{{project.title}}</label>
     <div class="content">
         <p class="meta-text">
             {%if project.role %}

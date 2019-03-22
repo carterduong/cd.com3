@@ -79,7 +79,6 @@ function init() {
     document.addEventListener( 'mousedown', onDocumentMouseDown, false );
     document.addEventListener( 'touchstart', onDocumentTouchStart, false );
     document.addEventListener( 'touchmove', onDocumentTouchMove, false );
-    //
     window.addEventListener( 'resize', onWindowResize, false );
 }
 
@@ -144,14 +143,24 @@ function animate() {
     stats.update();
 }
 
+// Change curve based on interval
+var interval = 2;
+var current = 1;
+
 function render() {
     // group.rotation.y += ( targetRotation - group.rotation.y ) * 0.05;
-    generateCurve();
+    if (current >= interval && !pause) {
+      generateCurve();
+      current = 1;
+    } else {
+      current++;
+    }
+    
     renderer.render( scene, camera );
 }
 
 function generateCurve() {
-  group.remove( nurbsLine )
+  group.remove(  nurbsLine )
 
   // NURBS curve
   nurbsControlPoints = [];
@@ -183,38 +192,14 @@ function generateCurve() {
 }
 
 
-function ggggggenerateCurve() {
-  var nurbsControlPoints = [];
-  var nurbsKnots = [];
-  var nurbsDegree = 3;
-  
-  for ( var i = 0; i <= nurbsDegree; i ++ ) {
-      nurbsKnots.push( 0 );
-  }
-  for ( var i = 0, j = 20; i < j; i ++ ) {
-      nurbsControlPoints.push(
-          new THREE.Vector4(
-              Math.random() * 400 - 200,
-              Math.random() * 400,
-              Math.random() * 400 - 200,
-              10 // weight of control point: higher means stronger attraction
-          )
-      );
-      var knot = ( i + 1 ) / ( j - nurbsDegree );
-      nurbsKnots.push( THREE.Math.clamp( knot, 0, 1 ) );
-  }
+/*** Pause Button ***/
+var button = document.getElementById('easter-egg');
+var pause = false;
 
-  var nurbsCurve = new THREE.NURBSCurve( nurbsDegree, nurbsKnots, nurbsControlPoints );
-  var nurbsGeometry = new THREE.BufferGeometry();
-  nurbsGeometry.setFromPoints( nurbsCurve.getPoints( 200 ) );
-  var nurbsMaterial = new THREE.LineBasicMaterial( { linewidth: 5, color: 0xFFFFFF } );
-  var nurbsLine = new THREE.Line( nurbsGeometry, nurbsMaterial );
-  nurbsLine.position.set( 0, - 100, 0 );
-  group.add( nurbsLine );
-  var nurbsControlPointsGeometry = new THREE.BufferGeometry();
-  nurbsControlPointsGeometry.setFromPoints( nurbsCurve.controlPoints );
-  var nurbsControlPointsMaterial = new THREE.LineBasicMaterial( { linewidth: 2, color: 0x777777, opacity: 0.0 } ); // CONTROL POINTS
-  var nurbsControlPointsLine = new THREE.Line( nurbsControlPointsGeometry, nurbsControlPointsMaterial );
-  nurbsControlPointsLine.position.copy( nurbsLine.position );
-  group.add( nurbsControlPointsLine );
-}
+button.addEventListener('click', function() {
+  if (pause) {
+    pause = false;
+  } else {
+    pause = true;
+  }
+});
