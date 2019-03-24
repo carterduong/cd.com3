@@ -282,7 +282,8 @@ padding: 0 0 0 0; } }
 p {
 margin: 1rem 0 0 0; }
 a {
-color: white; }
+color: white;
+text-decoration: none; }
 .clickable:hover {
 cursor: pointer; }
 /**** Accordion ****/
@@ -332,7 +333,7 @@ text-shadow: 0px 0px 5px white; } }
 /**** Folio ****/
 .folio {
 position: fixed;
-z-index: 9999999; }
+z-index: 1; }
 .folio#header {
 left: 1vw;
 top: 1vh; }

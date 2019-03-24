@@ -14,7 +14,7 @@ for (var i = 0; i < inputs.length; i++) {
   inputs[i].addEventListener("click", scroll(document.body, project_divs[i], 10), false);
 }
 
-window.addEventListener('scroll', function() {
+var getCurrentProject = debounce(function() {
   var max = 0;
   var max, currIndex, prevIndex = -1;
 
@@ -31,7 +31,8 @@ window.addEventListener('scroll', function() {
     prevIndex = currIndex;
   }
   console.log(currIndex);
-});
+}, 150);
+window.addEventListener('scroll', getCurrentProject);
 
 window.addEventListener('resize', function() {
   for (var i = 0; i < inputs.length; i++) {
@@ -91,3 +92,18 @@ function pixelsInViewport(element) {
 
   return visiblePx;
 }
+
+function debounce(func, wait, immediate) {
+	var timeout;
+	return function() {
+		var context = this, args = arguments;
+		var later = function() {
+			timeout = null;
+			if (!immediate) func.apply(context, args);
+		};
+		var callNow = immediate && !timeout;
+		clearTimeout(timeout);
+		timeout = setTimeout(later, wait);
+		if (callNow) func.apply(context, args);
+	};
+};

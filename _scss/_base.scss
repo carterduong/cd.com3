@@ -24,6 +24,7 @@ p {
 
 a {
   color: white;
+  text-decoration: none;
 }
 
 .clickable {
@@ -103,8 +104,8 @@ a {
 /**** Folio ****/
 .folio { 
   position: fixed;
-  z-index: 9999999;
-  
+  z-index: 1;
+
   &#header {
     left: 1vw;
     top: 1vh;
