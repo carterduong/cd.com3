@@ -131,14 +131,8 @@ a {
 
 /**** Project Template ****/
 .project {
-}
 
-.projects-container {
-
-}
-
-@media screen and (min-width: $break-medium) {  
-  .project {
+  @media screen and (min-width: $break-medium) {  
     position: relative;
     margin: auto;
     width: 50vw;
@@ -185,7 +179,7 @@ a {
 
 #mobile-landing {
   height: 100vh;
-  width: 100vw;
+  width: 50vw;
 }
 
 .image-container {
