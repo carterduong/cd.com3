@@ -24,7 +24,6 @@ p {
 
 a {
   color: white;
-  text-decoration: none;
 }
 
 .clickable {
@@ -129,6 +128,10 @@ a {
   }
 }
 
+.folio a {
+  text-decoration: none;
+}
+
 /**** Project Template ****/
 .project {
 
@@ -187,11 +190,11 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  margin-bottom: 2rem;
+  margin-bottom: 10vh;
   padding: 2rem 0 0 0;
 
   img {
-    max-width: 65%;
+    max-width: 75%;
     height: auto;
 
     &:not(:last-child) {
@@ -209,18 +212,6 @@ a {
   }
 }
 
-/**** Text ****/
-.text-container {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 2rem;
-  padding: 0 8vw 0 9vw;
-
-  @media screen and (min-width: $break-medium) {
-    display: none;
-  } 
-}
-
 .vertical-line{
   border-left: 0.1rem solid grey;
   width: .2rem; /* Use only border style */
@@ -231,4 +222,16 @@ a {
   @media screen and (min-width: $break-medium) {
     display: none;
   }
+}
+
+/**** Text ****/
+.text-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+  padding: 0 8vw 0 9vw;
+
+  @media screen and (min-width: $break-medium) {
+    display: none;
+  } 
 }

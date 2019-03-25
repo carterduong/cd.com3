@@ -282,8 +282,7 @@ padding: 0 0 0 0; } }
 p {
 margin: 1rem 0 0 0; }
 a {
-color: white;
-text-decoration: none; }
+color: white; }
 .clickable:hover {
 cursor: pointer; }
 /**** Accordion ****/
@@ -348,6 +347,8 @@ color: #A9A9A9; }
 right: 1vw;
 bottom: 1vh;
 color: #A9A9A9; }
+.folio a {
+text-decoration: none; }
 /**** Project Template ****/
 @media screen and (min-width: 600px) {
 .project {
@@ -388,10 +389,10 @@ align-items: center;
 display: flex;
 flex-direction: column;
 justify-content: space-evenly;
-margin-bottom: 2rem;
+margin-bottom: 10vh;
 padding: 2rem 0 0 0; }
 .image-container img {
-max-width: 65%;
+max-width: 75%;
 height: auto; }
 .image-container img:not(:last-child) {
 margin-bottom: 1rem; }
@@ -400,15 +401,6 @@ max-width: 70%;
 height: auto; }
 .image-container video:not(:last-child) {
 margin-bottom: 2vh; }
-/**** Text ****/
-.text-container {
-display: flex;
-flex-direction: column;
-margin-bottom: 2rem;
-padding: 0 8vw 0 9vw; }
-@media screen and (min-width: 600px) {
-.text-container {
-display: none; } }
 .vertical-line {
 border-left: 0.1rem solid grey;
 width: .2rem;
@@ -418,6 +410,15 @@ display: block;
 margin: 0 auto 3rem auto; }
 @media screen and (min-width: 600px) {
 .vertical-line {
+display: none; } }
+/**** Text ****/
+.text-container {
+display: flex;
+flex-direction: column;
+margin-bottom: 2rem;
+padding: 0 8vw 0 9vw; }
+@media screen and (min-width: 600px) {
+.text-container {
 display: none; } }
 html {
 font-family: Helvetica, sans-serif;
