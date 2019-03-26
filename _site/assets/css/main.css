@@ -411,6 +411,8 @@ margin: 0 auto 3rem auto; }
 @media screen and (min-width: 600px) {
 .vertical-line {
 display: none; } }
+.rotated {
+transform: rotate(90deg); }
 /**** Text ****/
 .text-container {
 display: flex;
