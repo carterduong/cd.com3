@@ -389,8 +389,7 @@ align-items: center;
 display: flex;
 flex-direction: column;
 justify-content: space-evenly;
-margin-bottom: 10vh;
-padding: 2rem 0 0 0; }
+margin-bottom: 4vh; }
 .image-container img {
 max-width: 75%;
 height: auto; }
@@ -401,6 +400,9 @@ max-width: 70%;
 height: auto; }
 .image-container video:not(:last-child) {
 margin-bottom: 2vh; }
+@media screen and (min-width: 600px) {
+.image-container {
+margin-bottom: 10vh; } }
 .vertical-line {
 border-left: 0.1rem solid grey;
 width: .2rem;
@@ -411,8 +413,6 @@ margin: 0 auto 3rem auto; }
 @media screen and (min-width: 600px) {
 .vertical-line {
 display: none; } }
-.rotated {
-transform: rotate(90deg); }
 /**** Text ****/
 .text-container {
 display: flex;
@@ -429,7 +429,7 @@ font-weight: 400;
 font-size: .9em; }
 h1 {
 font-weight: 400;
-font-size: 1.5rem;
+font-size: 1.4rem;
 letter-spacing: -0.1rem;
 text-transform: uppercase; }
 .text-container {
@@ -441,13 +441,11 @@ text-align: left; } }
 .folio {
 font-size: 1.4rem;
 letter-spacing: -0.07rem; } }
+/*** Accordion ***/
+label {
+text-transform: uppercase; }
 .content {
 font-size: .8rem;
 line-height: 1.1rem; }
 .meta-text {
-text-transform: uppercase; }
-.header {
-font-size: 1.8rem;
-letter-spacing: -0.1rem; }
-label {
 text-transform: uppercase; }

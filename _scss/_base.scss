@@ -126,6 +126,7 @@ a {
     bottom: 1vh;
     color: $grey;
   }
+
 }
 
 .folio a {
@@ -190,8 +191,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  margin-bottom: 10vh;
-  padding: 2rem 0 0 0;
+  margin-bottom: 4vh;
 
   img {
     max-width: 75%;
@@ -210,6 +210,10 @@ a {
       margin-bottom: 2vh;
     }   
   }
+
+  @media screen and (min-width: $break-medium) {
+    margin-bottom: 10vh;
+  }
 }
 
 .vertical-line{
@@ -222,10 +226,6 @@ a {
   @media screen and (min-width: $break-medium) {
     display: none;
   }
-}
-
-.rotated {
-  transform: rotate(90deg);
 }
 
 /**** Text ****/
