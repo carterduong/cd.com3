@@ -60,7 +60,7 @@ function scroll(element, destination, duration) {
 
     setTimeout(function() {
       projects_column[0].classList.remove("fadeIn");
-    }, 2500);
+    }, 2700);
   };
 }
 
