@@ -26,7 +26,7 @@
           <img src="{{image-url}}">
         {% endfor %}
         {% for gif in project.gifs %}
-          <video src="{{gif}}" autoplay muted loop></video>
+          <video src="{{gif}}" autoplay playsinline muted loop></video>
         {% endfor %}
     </div>
     <div class="text-container">
