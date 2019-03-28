@@ -193,6 +193,15 @@ a {
   justify-content: space-evenly;
   margin-bottom: 4vh;
 
+  picture {
+    max-width: 70%;
+    height: auto;
+
+    &:not(:last-child) {
+      margin-bottom: 2vh;
+    }
+  }
+
   img {
     max-width: 75%;
     height: auto;
@@ -208,7 +217,7 @@ a {
 
     &:not(:last-child) {
       margin-bottom: 2vh;
-    }   
+    }
   }
 
   @media screen and (min-width: $break-medium) {
