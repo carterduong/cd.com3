@@ -3,7 +3,7 @@
   link:
   date: 2017–2019
   role: Co-Editor, Art Direction, Design
-  description: <a href="">A student-run publication</a> that explores the culture of style, art, and design at UC San Diego.
+  description: <a href="https://drive.google.com/open?id=1fhh3G_KGaam5uttlMRh8_gPBNBtS-TsO" target="_blank">A student-run publication</a> that explores the culture of style, art, and design at UC San Diego.
     <br><br>Writing by Leanza Ellacer and Zach Roberts. Photograhy by Carter Duong, Lily Tang, and Dora Wang.
   images:
     - assets/img/fq1.png
@@ -12,6 +12,13 @@
     - assets/img/fq4.png
     - assets/img/fq5.png
 
+- Bitter Melon:
+  title: Bitter Melon
+  date: April 2019
+  role: Web Design, Development
+  description: <a href="http://bitter-melon.com" target="_blank">A lightweight photoblog</a> developed with <a href="https://choo.io" target="_blank">choo</a>.
+  gifs: 
+    - assets/img/b-m.mp4
 
 - Heavy Friends: 
   title: Heavy Friends
