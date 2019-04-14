@@ -16,9 +16,10 @@
   title: Bitter Melon
   date: April 2019
   role: Web Design, Development
-  description: <a href="https://carterduong-b-m-co.glitch.me" target="_blank">A lightweight photoblog</a> developed with <a href="https://choo.io" target="_blank">choo</a>.
+  description: <a href="https://dazzling-lewin-e0fdea.netlify.com" target="_blank">A lightweight photoblog</a> developed with <a href="https://choo.io" target="_blank">choo</a>.
   gifs: 
     - assets/img/b-m.mp4
+    - assets/img/b-m2.mp4
 
 - Heavy Friends: 
   title: Heavy Friends
