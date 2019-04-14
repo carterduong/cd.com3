@@ -16,7 +16,7 @@
   title: Bitter Melon
   date: April 2019
   role: Web Design, Development
-  description: <a href="http://bitter-melon.com" target="_blank">A lightweight photoblog</a> developed with <a href="https://choo.io" target="_blank">choo</a>.
+  description: <a href="https://carterduong-b-m-co.glitch.me" target="_blank">A lightweight photoblog</a> developed with <a href="https://choo.io" target="_blank">choo</a>.
   gifs: 
     - assets/img/b-m.mp4
 
@@ -28,6 +28,16 @@
   images:
     - assets/img/hffm-tear-small.png
     - assets/img/iPhone_1.png
+
+- Form:
+  title: Form
+  date: February 2017
+  role: Web Design, Development
+  description: <a href="http://form.carterduong.com" target="_blank">A series of sketches</a> inspired by <a href="http://wwwwwwwww.jodi.org" target="_blank">Jodi</a>.
+  gifs:
+    - assets/img/f-a.mp4
+    - assets/img/f-w1.mp4
+    - assets/img/f-w2.mp4
 
 - Résumé: 
   title: Résumé
