@@ -445,7 +445,7 @@ text-align: left; } }
 @media screen and (min-width: 600px) {
 .folio {
 font-size: 1.4rem;
-letter-spacing: -0.07rem; } }
+letter-spacing: -0.05rem; } }
 /*** Accordion ***/
 label {
 text-transform: uppercase; }

@@ -30,16 +30,6 @@
     - assets/img/hffm-tear-small.png
     - assets/img/iPhone_1.png
 
-- Form:
-  title: Form
-  date: February 2017
-  role: Web Design, Development
-  description: <a href="http://form.carterduong.com" target="_blank">A series of sketches</a> inspired by <a href="http://wwwwwwwww.jodi.org" target="_blank">Jodi</a>.
-  gifs:
-    - assets/img/f-a.mp4
-    - assets/img/f-w1.mp4
-    - assets/img/f-w2.mp4
-
 - Résumé: 
   title: Résumé
   date: November 2016
@@ -56,7 +46,6 @@
   description: Miscellaneous sketches in 3D and 2D.
   images: 
     - assets/img/aiv.png
-    - assets/img/mmm.png
     - assets/img/160.png
 
 - Extras: 
