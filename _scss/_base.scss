@@ -6,11 +6,10 @@ $grey: #A9A9A9;
 html {
   color: white;
   background-color: black;
-  font-size: 16px;
 }
 
 h1 {
-  margin: 0 0 0 0;
+  margin: 1rem 0 0 0;
   padding: 0 3vh 0 3vh;
 
   @media screen and (min-width: $break-medium) {
@@ -24,65 +23,12 @@ p {
 
 a {
   color: white;
-}
+  text-decoration: none;
 
-.clickable {
   &:hover {
-    cursor: pointer;
+    color: black;
+    background-color: white;
   }
-}
-
-/**** Accordion ****/
-.accordion {
-  display: none;
-
-  @media screen and (min-width: $break-medium) {
-    display: block;
-    position: fixed;
-    padding: 8vh 0 0 1vw;
-    width: 15vw;
-    top: 35vh;
-  }
-}
-
-.accordion li {
-  list-style:none;
-  width:100%;
-  -webkit-backface-visibility: hidden;
-  -webkit-transform: translateZ(0) scale(1.0, 1.0);
-  transform: translateZ(0);
-}    
-
-.accordion li label {
-  color: $grey;
-}
-
-// hide content by default
-.accordion .content {
-  max-height: 0;
-  -webkit-transition: max-height 1s linear, opacity 1s;
-  overflow: hidden;
-  opacity: 0;
-}
-
-// hide radio button
-.accordion input[type='radio'] {
-  display: none;    
-}
-
-// pulse active label
-.accordion input[type='radio']:checked + label {
-  animation: pulse 3s infinite;
-  color: $white;
-}
-
-// expand active content
-.accordion input[type='radio']:checked ~ .content {
-  height: auto;
-  max-height: 280px;
-  -webkit-transition: max-height 1s linear, opacity 1s;
-  opacity: 1;
-  color: $white;
 }
 
 @keyframes pulse {
@@ -100,39 +46,6 @@ a {
   }
 }
 
-/**** Folio ****/
-.folio { 
-  position: fixed;
-  z-index: 1;
-
-  &#header {
-    left: 1vw;
-    top: 1vh;
-  }
-
-  &#contact {
-    right: 1vw;
-    top: 1vh;
-  }
-
-  &#time {
-    left: 1vw;
-    bottom: 1vh;
-    color: $grey;
-  }
-
-  &#easter-egg {
-    right: 1vw;
-    bottom: 1vh;
-    color: $grey;
-  }
-
-}
-
-.folio a {
-  text-decoration: none;
-}
-
 /**** Project Template ****/
 .project {
 
@@ -140,6 +53,10 @@ a {
     position: relative;
     margin: auto;
     width: 50vw;
+  }
+
+  :last-child {
+    padding-bottom: 10vh;
   }
 }
 
@@ -173,12 +90,11 @@ a {
 
 /**** Images ****/
 #canvas-container {
-  position: absolute;
   top: 0;
   left: 0;
   z-index: -1;
   width: 98vw;
-  height: 100vh;
+  height: 90vh;
 } 
 
 #mobile-landing {
@@ -225,26 +141,51 @@ a {
   }
 }
 
-.vertical-line{
-  border-left: 0.1rem solid grey;
-  width: .2rem; /* Use only border style */
-  height: 10vh;
-  display: block;
-  margin: 0 auto 3rem auto;
-
-  @media screen and (min-width: $break-medium) {
-    display: none;
-  }
-}
 
 /**** Text ****/
-.text-container {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 2rem;
-  padding: 0 8vw 0 9vw;
 
-  @media screen and (min-width: $break-medium) {
-    display: none;
-  } 
+.bottom-text {
+  position: fixed;
+  height: 10vh;
+  width: 100vw;
+  bottom: 0;
+  background-color: black;
+  display: none;
+}
+
+.active {
+  display: flex;
+  justify-content: center;
+}
+
+.text-container {
+  width: 80vw;
+  background-image: linear-gradient(to right, #ffffff 40%, #000000 20%);
+  background-position: top;
+  background-size: 20px 1px;
+  background-repeat: repeat-x;
+  opacity: 1;
+
+  box-shadow: 0px -10px 10px black;
+
+  display: flex;
+  flex-direction: row; 
+}
+
+.title-text {
+  flex: 2;
+  margin: 2vh .5vw 1vh .5vw;
+  animation: pulse 3s infinite;
+}
+
+.description-text {
+ flex: 3;
+ margin: 2vh .5vw 1vh .5vw;
+
+}
+
+.meta-text {
+  flex: 2;
+  margin: 2vh .5vw 1vh 1vw;
+
 }

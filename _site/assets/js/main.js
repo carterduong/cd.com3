@@ -1,11 +1,10 @@
-/*** Init ***/
-document.getElementById("info").checked = true;
-
-/*** Variables ***/
-
+/*** Init and Variables ***/
 var inputs = document.querySelectorAll("input");
+var bottom_texts = document.getElementsByClassName("bottom-text");
 var project_divs = document.querySelectorAll(".project");
 var projects_column = document.getElementsByClassName("projects-container");
+
+bottom_texts[0].classList.add("active");
 
 /*** Event Listeners ***/
 
@@ -14,9 +13,10 @@ for (var i = 0; i < inputs.length; i++) {
   inputs[i].addEventListener("click", scroll(document.body, project_divs[i], 10), false);
 }
 
+var currIndex, prevIndex = -1;
+
 var getCurrentProject = debounce(function() {
-  var max = 0;
-  var max, currIndex, prevIndex = -1;
+  var max = -1;
 
   for (var i = 0; i < project_divs.length; i++) {
     curr_px = pixelsInViewport(project_divs[i]);
@@ -27,7 +27,12 @@ var getCurrentProject = debounce(function() {
   }
 
   if (currIndex != prevIndex) {
-    inputs[currIndex].checked = true;
+    var active_list = document.getElementsByClassName("active");
+    for (var i = 0; i < active_list.length; i++) {
+      active_list[i].classList.remove("active");
+    }
+    bottom_texts[currIndex].classList.add("active");
+
     prevIndex = currIndex;
   }
   console.log(currIndex);

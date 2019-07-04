@@ -1,0 +1,25 @@
+{% for project in site.data.projects %}
+  <div class="bottom-text">
+    <div class="text-container">
+      <h1 class="title-text">{{project.title}}</h1>
+      <p class="description-text">
+        {{project.description}}
+      </p>
+      <p class="meta-text">
+        {%if project.link %}
+          {{project.link%}}
+          <br>
+        {%endif%}
+        {%if project.role %}
+          {{project.role}}
+          <br>
+        {%endif%}
+        {%if project.date %}
+          {{project.date}}
+          <br>
+        {%endif%}
+        {{project.collaborators}}
+      </p>
+    </div>
+  </div>
+{% endfor %}

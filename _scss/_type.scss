@@ -1,42 +1,10 @@
-html {
+html, h1, p {
   font-family: Helvetica, sans-serif;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
-  font-size: .9em;
+  font-size: 1.063em;
 }
 
-h1 {
-  font-weight: 400;
-  font-size: 1.4rem;
-  letter-spacing: -0.1rem;
-  text-transform: uppercase;
-}
-
-.text-container {
-  text-align: center;
-
-  @media screen and (min-width: $break-medium) {
-    text-align: left;
-  }
-}
-
-.folio {
-  @media screen and (min-width: $break-medium) {
-    font-size: 1.4rem;
-    letter-spacing: -0.05rem;
-  }
-}
-
-/*** Accordion ***/
-label {
-  text-transform: uppercase;
-}
-
-.content {
-  font-size: .8rem;
-  line-height: 1.1rem;
-}
-
-.meta-text {
-  text-transform: uppercase;
+.title-text {
+  text-align: right;
 }

@@ -271,10 +271,9 @@ display: none; }
 display: none; }
 html {
 color: white;
-background-color: black;
-font-size: 16px; }
+background-color: black; }
 h1 {
-margin: 0 0 0 0;
+margin: 1rem 0 0 0;
 padding: 0 3vh 0 3vh; }
 @media screen and (min-width: 600px) {
 h1 {
@@ -282,43 +281,11 @@ padding: 0 0 0 0; } }
 p {
 margin: 1rem 0 0 0; }
 a {
-color: white; }
-.clickable:hover {
-cursor: pointer; }
-/**** Accordion ****/
-.accordion {
-display: none; }
-@media screen and (min-width: 600px) {
-.accordion {
-display: block;
-position: fixed;
-padding: 8vh 0 0 1vw;
-width: 15vw;
-top: 35vh; } }
-.accordion li {
-list-style: none;
-width: 100%;
--webkit-backface-visibility: hidden;
--webkit-transform: translateZ(0) scale(1, 1);
-transform: translateZ(0); }
-.accordion li label {
-color: #A9A9A9; }
-.accordion .content {
-max-height: 0;
--webkit-transition: max-height 1s linear, opacity 1s;
-overflow: hidden;
-opacity: 0; }
-.accordion input[type='radio'] {
-display: none; }
-.accordion input[type='radio']:checked + label {
-animation: pulse 3s infinite;
-color: #FFFFFF; }
-.accordion input[type='radio']:checked ~ .content {
-height: auto;
-max-height: 280px;
--webkit-transition: max-height 1s linear, opacity 1s;
-opacity: 1;
-color: #FFFFFF; }
+color: white;
+text-decoration: none; }
+a:hover {
+color: black;
+background-color: white; }
 @keyframes pulse {
 0% {
 opacity: .3;
@@ -329,32 +296,14 @@ text-shadow: 0x 0px 5px white; }
 100% {
 opacity: .3;
 text-shadow: 0px 0px 5px white; } }
-/**** Folio ****/
-.folio {
-position: fixed;
-z-index: 1; }
-.folio#header {
-left: 1vw;
-top: 1vh; }
-.folio#contact {
-right: 1vw;
-top: 1vh; }
-.folio#time {
-left: 1vw;
-bottom: 1vh;
-color: #A9A9A9; }
-.folio#easter-egg {
-right: 1vw;
-bottom: 1vh;
-color: #A9A9A9; }
-.folio a {
-text-decoration: none; }
 /**** Project Template ****/
 @media screen and (min-width: 600px) {
 .project {
 position: relative;
 margin: auto;
 width: 50vw; } }
+.project :last-child {
+padding-bottom: 10vh; }
 .fadeIn {
 -webkit-animation: opacityUp 3s;
 opacity: 1.0;
@@ -375,12 +324,11 @@ opacity: 1.0;
 -webkit-opacity: 1.0; } }
 /**** Images ****/
 #canvas-container {
-position: absolute;
 top: 0;
 left: 0;
 z-index: -1;
 width: 98vw;
-height: 100vh; }
+height: 90vh; }
 #mobile-landing {
 height: 100vh;
 width: 50vw; }
@@ -408,49 +356,41 @@ margin-bottom: 2vh; }
 @media screen and (min-width: 600px) {
 .image-container {
 margin-bottom: 10vh; } }
-.vertical-line {
-border-left: 0.1rem solid grey;
-width: .2rem;
-/* Use only border style */
-height: 10vh;
-display: block;
-margin: 0 auto 3rem auto; }
-@media screen and (min-width: 600px) {
-.vertical-line {
-display: none; } }
 /**** Text ****/
-.text-container {
+.bottom-text {
+position: fixed;
+height: 10vh;
+width: 100vw;
+bottom: 0;
+background-color: black;
+display: none; }
+.active {
 display: flex;
-flex-direction: column;
-margin-bottom: 2rem;
-padding: 0 8vw 0 9vw; }
-@media screen and (min-width: 600px) {
+justify-content: center; }
 .text-container {
-display: none; } }
-html {
+width: 80vw;
+background-image: linear-gradient(to right, #ffffff 40%, #000000 20%);
+background-position: top;
+background-size: 20px 1px;
+background-repeat: repeat-x;
+opacity: 1;
+box-shadow: 0px -10px 10px black;
+display: flex;
+flex-direction: row; }
+.title-text {
+flex: 2;
+margin: 2vh .5vw 1vh .5vw;
+animation: pulse 3s infinite; }
+.description-text {
+flex: 3;
+margin: 2vh .5vw 1vh .5vw; }
+.meta-text {
+flex: 2;
+margin: 2vh .5vw 1vh 1vw; }
+html, h1, p {
 font-family: Helvetica, sans-serif;
 font-weight: 400;
 -webkit-font-smoothing: antialiased;
-font-size: .9em; }
-h1 {
-font-weight: 400;
-font-size: 1.4rem;
-letter-spacing: -0.1rem;
-text-transform: uppercase; }
-.text-container {
-text-align: center; }
-@media screen and (min-width: 600px) {
-.text-container {
-text-align: left; } }
-@media screen and (min-width: 600px) {
-.folio {
-font-size: 1.4rem;
-letter-spacing: -0.05rem; } }
-/*** Accordion ***/
-label {
-text-transform: uppercase; }
-.content {
-font-size: .8rem;
-line-height: 1.1rem; }
-.meta-text {
-text-transform: uppercase; }
+font-size: 1.063em; }
+.title-text {
+text-align: right; }
