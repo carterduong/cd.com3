@@ -75,14 +75,14 @@ function init() {
     document.addEventListener( 'touchmove', onDocumentTouchMove, false );
     document.addEventListener( 'mousedown', onMouseDown, false);
     document.addEventListener( 'mouseup', onMouseUp, false);
+    document.addEventListener( 'touchstart', onMouseDown );
+    document.addEventListener( 'touchend', onMouseUp );
     window.addEventListener( 'resize', onWindowResize, false );
 }
 
 function onWindowResize() {
     windowHalfX = window.innerWidth / 2;
     windowHalfY = window.innerHeight / 2;
-
-    pause = true;
 
     canvasWidth = document.getElementById('canvas-container').offsetWidth;
     canvasHeight = document.getElementById('canvas-container').offsetHeight;
