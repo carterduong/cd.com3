@@ -353,10 +353,10 @@ bottom: 0;
 left: 0;
 background-color: black;
 display: none;
-height: 19vh; }
+height: 25vh; }
 @media screen and (min-width: 350px) {
 .bottom-text {
-height: 15vh; } }
+height: 20vh; } }
 @media screen and (min-width: 600px) {
 .bottom-text {
 height: 16vh; } }
@@ -393,7 +393,7 @@ flex: 1; }
 .title-text {
 flex: 2; } }
 .description-text {
-flex: 2; }
+flex: 3; }
 @media screen and (min-width: 800px) {
 .description-text {
 flex: 3; } }
@@ -407,7 +407,7 @@ font-family: Helvetica, sans-serif;
 font-weight: 400;
 -webkit-font-smoothing: antialiased;
 font-size: 0.8em;
-line-height: 1.3rem; }
+line-height: 1.2rem; }
 @media screen and (min-width: 750px) {
 html, h1, p {
 font-size: 0.875em; } }

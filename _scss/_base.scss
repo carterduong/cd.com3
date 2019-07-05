@@ -132,10 +132,10 @@ a {
   left: 0;
   background-color: black;
   display: none;
-  height: 19vh;
+  height: 25vh;
 
   @media screen and (min-width: 350px)  {
-    height: 15vh;
+    height: 20vh;
   }
   @media screen and (min-width: $break-small) {
     height: 16vh;
@@ -191,7 +191,7 @@ a {
 }
 
 .description-text {
-  flex: 2;
+  flex: 3;
 
   @media screen and (min-width: $break-small) {
   }
