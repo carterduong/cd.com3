@@ -1,5 +1,5 @@
 var container, stats;
-var camera, scene, renderer;
+var camera, scene, renderer, controls;
 var group;
 var nurbsLine;
 var targetRotation = 0;
@@ -14,6 +14,8 @@ var windowY = windowHalfY * 2;
 
 var canvasWidth;
 var canvasHeight;
+
+var pause = false;
 
 init();
 animate();
@@ -73,12 +75,16 @@ function init() {
     renderer.setPixelRatio( window.devicePixelRatio );
     renderer.setSize( canvasWidth, canvasHeight );
 
+    control = new THREE.OrbitControls( camera, renderer.domElement );
+
     container.appendChild( renderer.domElement );
     stats = new Stats();
     //container.appendChild( stats.dom );
-    document.addEventListener( 'mousedown', onDocumentMouseDown, false );
+    // document.addEventListener( 'mousedown', onDocumentMouseDown, false );
     document.addEventListener( 'touchstart', onDocumentTouchStart, false );
     document.addEventListener( 'touchmove', onDocumentTouchMove, false );
+    document.addEventListener( 'mousedown', onMouseDown, false);
+    document.addEventListener( 'mouseup', onMouseUp, false);
     window.addEventListener( 'resize', onWindowResize, false );
 }
 
@@ -136,7 +142,15 @@ function onDocumentTouchMove( event ) {
     }
 }
 
-//
+function onMouseDown( event ) {
+  pause = true;
+}
+
+function onMouseUp( event ) {
+  pause = false;
+}
+
+
 function animate() {
     requestAnimationFrame( animate );
     render();
@@ -148,6 +162,7 @@ var interval = 2;
 var current = 1;
 
 function render() {
+    console.log(pause);
     // group.rotation.y += ( targetRotation - group.rotation.y ) * 0.05;
     if (current >= interval && !pause) {
       generateCurve();
@@ -160,7 +175,7 @@ function render() {
 }
 
 function generateCurve() {
-  group.remove(  nurbsLine )
+  group.remove( nurbsLine );
 
   // NURBS curve
   nurbsControlPoints = [];
@@ -187,19 +202,6 @@ function generateCurve() {
   nurbsGeometry.setFromPoints( nurbsCurve.getPoints( 200 ) );
   nurbsMaterial = new THREE.LineBasicMaterial( { linewidth: 5, color: 0xFFFFFF } );
   nurbsLine = new THREE.Line( nurbsGeometry, nurbsMaterial );
-  nurbsLine.position.set( 0, - 100, 0 );
+  nurbsLine.position.set( 0, -250, 0 );
   group.add( nurbsLine );
 }
-
-
-/*** Pause Button ***/
-var button = document.getElementById('easter-egg');
-var pause = false;
-
-button.addEventListener('click', function() {
-  if (pause) {
-    pause = false;
-  } else {
-    pause = true;
-  }
-});

@@ -1,9 +1,8 @@
 - Carter Duong:
   title: ⟡ Carter Duong
-  link: <a href="are.na/carter-duong" target="_blank">Are.na</a><br>
-        <a href="instagram.com/carterduong" target="_blank">Instagram</a><br>
-        <a href="mailto:c@carterduong.com" target="_blank">Email</a><br>
-  
+  link: <a href="http://are.na./carter-duong" target="_blank">Are.na↗</a><br>
+        <a href="http://instagram.com/carterduong" target="_blank">Instagram↗</a><br>
+        <a href="mailto:c@carterduong.com" target="_blank">Email↗</a><br>
   description: is a designer and developer from 
                 the Bay Area<sup><a href="https://goo.gl/maps/cKExn6muhyq" target="_blank">1</a>+<a href="https://goo.gl/maps/VHi9HtWjcHs" target="_blank">2</a></sup> 
                 and based near Los Angeles.<sup><a href="https://goo.gl/maps/NrSy197bgj22" target="_blank">3</a></sup> He graduated from UC San Diego<sup><a href="https://goo.gl/maps/c4LcBHj2JUu" target="_blank">4</a></sup>
@@ -11,10 +10,10 @@
 
 - Fashion Quarterly: 
   title: Fashion Quarterly
-  link:
+  link: <a href="https://drive.google.com/open?id=1fhh3G_KGaam5uttlMRh8_gPBNBtS-TsO" class="underline" target="_blank">PDF↗</a>
   date: 2017–2019
   role: Co-Editor, Art Direction, Design
-  description: <a href="https://drive.google.com/open?id=1fhh3G_KGaam5uttlMRh8_gPBNBtS-TsO" target="_blank">A student-run publication</a> that explores the culture of style, art, and design at UC San Diego. Writing by Leanza Ellacer and Zach Roberts. Photograhy by Carter Duong, Lily Tang, and Dora Wang.
+  description: A student-run publication</a> that explores the culture of style, art, and design at UC San Diego. Writing by Leanza Ellacer and Zach Roberts. Photography by Carter Duong, Lily Tang, and Dora Wang.
   images:
     - assets/img/fq1.png
     - assets/img/fq2.png
@@ -24,18 +23,20 @@
 
 - Bitter Melon:
   title: Bitter Melon
+  link: <a href="http://bitter-melon.co" class="underline" target="_blank">Site↗</a>
   date: April 2019
   role: Web Design, Development
-  description: <a href="http://bitter-melon.co" target="_blank">A lightweight photoblog</a> developed with <a href="https://choo.io" target="_blank">choo</a>.<br><br>Photography by Carter Duong.
+  description: A lightweight photoblog developed using <a href="https://choo.io" target="_blank">choo</a>. Photography by Carter Duong.
   gifs: 
     - assets/img/b-m.mp4
     - assets/img/b-m2.mp4
 
 - Heavy Friends: 
   title: Heavy Friends
+  link: <a href="http://heavyfriends.info" class="underline" target="_blank">Site↗</a>
   date: April 2018
   role: Web Design, Development
-  description: <a href="http://heavyfriends.info" target="_blank">A microsite</a> for a weekly radio show based out of KSDT at UC San Diego.
+  description: A microsite for a weekly radio show based out of KSDT at UC San Diego. Developed using three.js.
   images:
     - assets/img/hffm-tear-small.png
     - assets/img/iPhone_1.png
@@ -44,7 +45,7 @@
   title: Résumé
   date: November 2016
   role: Game Design, Development  
-  description: A short game about being true to yourself.
+  description: A short game about computer programming, squiggles, and being true to yourself. Developed using Unity.
   gifs:
     - assets/img/resume-1.mp4
     - assets/img/resume-2.mp4
@@ -59,8 +60,8 @@
     - assets/img/160.png
 
 - Extras: 
-  title: Extras
-  date:
+  title: 
+  date: 
   role:
   description: 
   images:

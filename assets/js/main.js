@@ -32,10 +32,8 @@ var getCurrentProject = debounce(function() {
       active_list[i].classList.remove("active");
     }
     bottom_texts[currIndex].classList.add("active");
-
     prevIndex = currIndex;
   }
-  console.log(currIndex);
 }, 150);
 window.addEventListener('scroll', getCurrentProject);
 
