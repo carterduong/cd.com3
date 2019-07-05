@@ -1,7 +1,7 @@
 var container, stats;
 var camera, scene, renderer, controls;
 var group;
-var nurbsLine;
+var nurbsLine, nurbsMaterial;
 var targetRotation = 0;
 var targetRotationOnMouseDown = 0;
 var mouseX = 0;
@@ -23,7 +23,7 @@ animate();
 function init() {
     container = document.getElementById('canvas-container');
     camera = new THREE.PerspectiveCamera( 50, window.innerWidth / window.innerHeight, 1, 1000 );
-    camera.position.set( 0, 150, 700 );
+    camera.position.set( 0, 0, 700 );
     scene = new THREE.Scene();
     scene.background = new THREE.Color( 0x000000 );
     group = new THREE.Group();
@@ -41,7 +41,7 @@ function init() {
         nurbsControlPoints.push(
             new THREE.Vector4(
                 Math.random() * 400 - 200,
-                Math.random() * 400,
+                Math.random() * 400 - 230,
                 Math.random() * 400 - 200,
                 10 // weight of control point: higher means stronger attraction
             )
@@ -53,20 +53,10 @@ function init() {
     var nurbsCurve = new THREE.NURBSCurve( nurbsDegree, nurbsKnots, nurbsControlPoints );
     var nurbsGeometry = new THREE.BufferGeometry();
     nurbsGeometry.setFromPoints( nurbsCurve.getPoints( 200 ) );
-    var nurbsMaterial = new THREE.LineBasicMaterial( { linewidth: 5, color: 0xFFFFFF } );
+    nurbsMaterial = new THREE.LineBasicMaterial( { linewidth: 5, color: 0xFFFFFF } );
     nurbsLine = new THREE.Line( nurbsGeometry, nurbsMaterial );
-    nurbsLine.position.set( 0, - 100, 0 );
+    nurbsLine.position.set( 0, 0, 0 );
     group.add( nurbsLine );
-
-    // control points line
-    /*
-    var nurbsControlPointsGeometry = new THREE.BufferGeometry();
-    nurbsControlPointsGeometry.setFromPoints( nurbsCurve.controlPoints );
-    var nurbsControlPointsMaterial = new THREE.LineBasicMaterial( { linewidth: 2, color: 0xFFFFFF, opacity: 1.0 } ); // CONTROL POINTS
-    var nurbsControlPointsLine = new THREE.Line( nurbsControlPointsGeometry, nurbsControlPointsMaterial );
-    nurbsControlPointsLine.position.copy( nurbsLine.position );
-    group.add( nurbsControlPointsLine );
-    */
 
     // renderer init
     canvasWidth = document.getElementById('canvas-container').offsetWidth;
@@ -79,7 +69,7 @@ function init() {
 
     container.appendChild( renderer.domElement );
     stats = new Stats();
-    //container.appendChild( stats.dom );
+    // container.appendChild( stats.dom );
     // document.addEventListener( 'mousedown', onDocumentMouseDown, false );
     document.addEventListener( 'touchstart', onDocumentTouchStart, false );
     document.addEventListener( 'touchmove', onDocumentTouchMove, false );
@@ -92,6 +82,8 @@ function onWindowResize() {
     windowHalfX = window.innerWidth / 2;
     windowHalfY = window.innerHeight / 2;
 
+    pause = true;
+
     canvasWidth = document.getElementById('canvas-container').offsetWidth;
     canvasHeight = document.getElementById('canvas-container').offsetHeight;
     camera.aspect = canvasWidth / canvasHeight;
@@ -99,7 +91,6 @@ function onWindowResize() {
     renderer.setSize( canvasWidth, canvasHeight );
 }
 
-//
 function onDocumentMouseDown( event ) {
     event.preventDefault();
     document.addEventListener( 'mousemove', onDocumentMouseMove, false );
@@ -150,7 +141,6 @@ function onMouseUp( event ) {
   pause = false;
 }
 
-
 function animate() {
     requestAnimationFrame( animate );
     render();
@@ -158,12 +148,11 @@ function animate() {
 }
 
 // Change curve based on interval
-var interval = 2;
+var interval = 3;
 var current = 1;
 
 function render() {
-    console.log(pause);
-    // group.rotation.y += ( targetRotation - group.rotation.y ) * 0.05;
+
     if (current >= interval && !pause) {
       generateCurve();
       current = 1;
@@ -182,26 +171,24 @@ function generateCurve() {
   nurbsKnots = [];
   nurbsDegree = 3;
   for ( var i = 0; i <= nurbsDegree; i ++ ) {
-      nurbsKnots.push( 0 );
+    nurbsKnots.push( 0 );
   }
   for ( var i = 0, j = 20; i < j; i ++ ) {
-      nurbsControlPoints.push(
-          new THREE.Vector4(
-              Math.random() * 400 - 200,
-              Math.random() * 400,
-              Math.random() * 400 - 200,
-              10 // weight of control point: higher means stronger attraction
-          )
-      );
-      var knot = ( i + 1 ) / ( j - nurbsDegree );
-      nurbsKnots.push( THREE.Math.clamp( knot, 0, 1 ) );
+    nurbsControlPoints.push(
+        new THREE.Vector4(
+            Math.random() * 400 - 200,
+            Math.random() * 400 - 230,
+            Math.random() * 400 - 200,
+            10 // weight of control point: higher means stronger attraction
+        )
+    );
+    var knot = ( i + 1 ) / ( j - nurbsDegree );
+    nurbsKnots.push( THREE.Math.clamp( knot, 0, 1 ) );
   }
-
   nurbsCurve = new THREE.NURBSCurve( nurbsDegree, nurbsKnots, nurbsControlPoints );
   nurbsGeometry = new THREE.BufferGeometry();
   nurbsGeometry.setFromPoints( nurbsCurve.getPoints( 200 ) );
-  nurbsMaterial = new THREE.LineBasicMaterial( { linewidth: 5, color: 0xFFFFFF } );
   nurbsLine = new THREE.Line( nurbsGeometry, nurbsMaterial );
-  nurbsLine.position.set( 0, -250, 0 );
+  nurbsLine.position.set( 0, 0, 0 );
   group.add( nurbsLine );
 }

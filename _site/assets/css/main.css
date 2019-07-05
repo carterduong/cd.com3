@@ -406,7 +406,7 @@ html, h1, p {
 font-family: Helvetica, sans-serif;
 font-weight: 400;
 -webkit-font-smoothing: antialiased;
-font-size: 0.6em;
+font-size: 0.8em;
 line-height: 1.3rem; }
 @media screen and (min-width: 750px) {
 html, h1, p {
