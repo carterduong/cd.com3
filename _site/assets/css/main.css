@@ -356,7 +356,7 @@ display: none;
 height: 25vh; }
 @media screen and (min-width: 350px) {
 .bottom-text {
-height: 20vh; } }
+height: 17vh; } }
 @media screen and (min-width: 600px) {
 .bottom-text {
 height: 16vh; } }
