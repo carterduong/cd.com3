@@ -18,7 +18,10 @@
           <br>
         {%endif%}
         {%if project.link %}
-          {{project.link%}}
+          {%for link in project.link %}
+            {{link}}↗&#xFE0E;
+            <br>
+          {%endfor%}
         {%endif%}
         {{project.collaborators}}
       </p>

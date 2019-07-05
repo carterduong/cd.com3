@@ -1,8 +1,9 @@
 - Carter Duong:
   title: ⟡ Carter Duong
-  link: <a href="http://are.na./carter-duong" target="_blank">Are.na↗&#xFE0E;</a><br>
-        <a href="http://instagram.com/carterduong" target="_blank">Instagram↗</a><br>
-        <a href="mailto:c@carterduong.com" target="_blank">Email↗</a><br>
+  link: 
+      - <a href="http://are.na./carter-duong" target="_blank">Are.na</a>
+      - <a href="http://instagram.com/carterduong" target="_blank">Instagram</a>
+      - <a href="mailto:c@carterduong.com" target="_blank">Email</a>
   description: is a designer and developer from 
                 the Bay Area<sup><a href="https://goo.gl/maps/cKExn6muhyq" target="_blank">1</a>+<a href="https://goo.gl/maps/VHi9HtWjcHs" target="_blank">2</a></sup> 
                 and based near Los Angeles.<sup><a href="https://goo.gl/maps/NrSy197bgj22" target="_blank">3</a></sup> He graduated from UC San Diego<sup><a href="https://goo.gl/maps/c4LcBHj2JUu" target="_blank">4</a></sup>
@@ -10,7 +11,7 @@
 
 - Fashion Quarterly: 
   title: Fashion Quarterly
-  link: <a href="https://drive.google.com/open?id=1fhh3G_KGaam5uttlMRh8_gPBNBtS-TsO" class="underline" target="_blank">PDF↗</a>
+  link: <a href="https://drive.google.com/open?id=1fhh3G_KGaam5uttlMRh8_gPBNBtS-TsO" class="underline" target="_blank">PDF</a>
   date: 2017–2019
   role: Co-Editor, Art Direction, Design
   description: A student-run publication</a> that explores the culture of style, art, and design at UC San Diego. Writing by Leanza Ellacer and Zach Roberts. Photography by Carter Duong, Lily Tang, and Dora Wang.
@@ -23,7 +24,7 @@
 
 - Bitter Melon:
   title: Bitter Melon
-  link: <a href="http://bitter-melon.co" class="underline" target="_blank">Site↗</a>
+  link: <a href="http://bitter-melon.co" class="underline" target="_blank">Site</a>
   date: April 2019
   role: Web Design, Development
   description: A lightweight photoblog developed using <a href="https://choo.io" target="_blank">choo</a>. Photography by Carter Duong.
@@ -33,7 +34,7 @@
 
 - Heavy Friends: 
   title: Heavy Friends
-  link: <a href="http://heavyfriends.info" class="underline" target="_blank">Site↗</a>
+  link: <a href="http://heavyfriends.info" class="underline" target="_blank">Site</a>
   date: April 2018
   role: Web Design, Development
   description: A microsite for a weekly radio show based out of KSDT at UC San Diego. Developed using three.js.
