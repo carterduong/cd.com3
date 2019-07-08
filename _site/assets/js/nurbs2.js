@@ -93,6 +93,12 @@ function onWindowResize() {
     windowHalfX = window.innerWidth / 2;
     windowHalfY = window.innerHeight / 2;
 
+    if (viewportWidth < 800) {
+      camera.position.set( 0, 0, 1100 );
+    } else {
+      camera.position.set( 0, 0, 700 );
+    }
+
     canvasWidth = document.getElementById('canvas-container').offsetWidth;
     canvasHeight = document.getElementById('canvas-container').offsetHeight;
     camera.aspect = canvasWidth / canvasHeight;
