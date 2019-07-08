@@ -11,6 +11,8 @@ var windowHalfX = document.getElementById('canvas-container').offsetWidth / 2;
 var windowHalfY = document.getElementById('canvas-container').offsetHeight / 2;
 var windowX = windowHalfX * 2;
 var windowY = windowHalfY * 2;
+var viewportWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+var viewportHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
 
 var canvasWidth;
 var canvasHeight;
@@ -22,12 +24,15 @@ animate();
 
 function init() {
     container = document.getElementById('canvas-container');
-    camera = new THREE.PerspectiveCamera( 50, window.innerWidth / window.innerHeight, 1, 1000 );
-    camera.position.set( 0, 0, 700 );
+    camera = new THREE.PerspectiveCamera( 50, window.innerWidth / window.innerHeight, 1, 1500 );
+    if (viewportWidth < 800) {
+      camera.position.set( 0, 0, 1100 );
+    } else {
+      camera.position.set( 0, 0, 700 );
+    }
     scene = new THREE.Scene();
     scene.background = new THREE.Color( 0x000000 );
     group = new THREE.Group();
-    group.position.y = 50;
     scene.add( group );
 
     // NURBS curve
@@ -53,7 +58,11 @@ function init() {
     var nurbsCurve = new THREE.NURBSCurve( nurbsDegree, nurbsKnots, nurbsControlPoints );
     var nurbsGeometry = new THREE.BufferGeometry();
     nurbsGeometry.setFromPoints( nurbsCurve.getPoints( 200 ) );
-    nurbsMaterial = new THREE.LineBasicMaterial( { linewidth: 5, color: 0xFFFFFF } );
+    if (viewportWidth < 800) {
+      nurbsMaterial = new THREE.LineBasicMaterial( { linewidth: 7, color: 0xFFFFFF } );
+    } else {
+      nurbsMaterial = new THREE.LineBasicMaterial( { linewidth: 5, color: 0xFFFFFF } );
+    }
     nurbsLine = new THREE.Line( nurbsGeometry, nurbsMaterial );
     nurbsLine.position.set( 0, 0, 0 );
     group.add( nurbsLine );
