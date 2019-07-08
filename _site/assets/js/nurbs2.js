@@ -28,7 +28,7 @@ function init() {
     if (viewportWidth < 800) {
       camera.position.set( 0, 0, 1100 );
     } else {
-      camera.position.set( 0, 0, 700 );
+      camera.position.set( 0, 0, 900 );
     }
     scene = new THREE.Scene();
     scene.background = new THREE.Color( 0x000000 );
@@ -61,7 +61,7 @@ function init() {
     if (viewportWidth < 800) {
       nurbsMaterial = new THREE.LineBasicMaterial( { linewidth: 7, color: 0xFFFFFF } );
     } else {
-      nurbsMaterial = new THREE.LineBasicMaterial( { linewidth: 5, color: 0xFFFFFF } );
+      nurbsMaterial = new THREE.LineBasicMaterial( { linewidth: 13, color: 0xFFFFFF } );
     }
     nurbsLine = new THREE.Line( nurbsGeometry, nurbsMaterial );
     nurbsLine.position.set( 0, 0, 0 );
@@ -80,10 +80,11 @@ function init() {
     stats = new Stats();
     // container.appendChild( stats.dom );
     // document.addEventListener( 'mousedown', onDocumentMouseDown, false );
+    container.addEventListener( 'mousedown', onMouseDown, false);
+    document.addEventListener( 'mouseup', onMouseUp, false);
+    
     document.addEventListener( 'touchstart', onDocumentTouchStart, false );
     document.addEventListener( 'touchmove', onDocumentTouchMove, false );
-    document.addEventListener( 'mousedown', onMouseDown, false);
-    document.addEventListener( 'mouseup', onMouseUp, false);
     document.addEventListener( 'touchstart', onMouseDown );
     document.addEventListener( 'touchend', onMouseUp );
     window.addEventListener( 'resize', onWindowResize, false );
@@ -92,18 +93,22 @@ function init() {
 function onWindowResize() {
     windowHalfX = window.innerWidth / 2;
     windowHalfY = window.innerHeight / 2;
-
-    if (viewportWidth < 800) {
-      camera.position.set( 0, 0, 1100 );
-    } else {
-      camera.position.set( 0, 0, 700 );
-    }
+    viewportWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+    viewportHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
 
     canvasWidth = document.getElementById('canvas-container').offsetWidth;
     canvasHeight = document.getElementById('canvas-container').offsetHeight;
     camera.aspect = canvasWidth / canvasHeight;
     camera.updateProjectionMatrix();
     renderer.setSize( canvasWidth, canvasHeight );
+    
+    if (viewportWidth < 800) {
+      camera.position.set( 0, 0, 1100 );
+      console.log(viewportWidth);
+    } else {
+      camera.position.set( 0, 0, 900 );
+    }
+    interval = 3;
 }
 
 function onDocumentMouseDown( event ) {
@@ -149,11 +154,13 @@ function onDocumentTouchMove( event ) {
 }
 
 function onMouseDown( event ) {
-  pause = true;
+  // pause = true;
+  interval = 90;
 }
 
 function onMouseUp( event ) {
-  pause = false;
+  // pause = false;
+  interval = 3;
 }
 
 function animate() {
@@ -204,6 +211,6 @@ function generateCurve() {
   nurbsGeometry = new THREE.BufferGeometry();
   nurbsGeometry.setFromPoints( nurbsCurve.getPoints( 200 ) );
   nurbsLine = new THREE.Line( nurbsGeometry, nurbsMaterial );
-  nurbsLine.position.set( 0, 0, 0 );
+  nurbsLine.position.set( 0, 50, 0 );
   group.add( nurbsLine );
 }

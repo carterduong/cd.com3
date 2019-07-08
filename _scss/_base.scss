@@ -90,17 +90,8 @@ a {
   justify-content: space-evenly;
   margin-bottom: 4vh;
 
-  picture {
-    max-width: 70%;
-    height: auto;
-
-    &:not(:last-child) {
-      margin-bottom: 2vh;
-    }
-  }
-
   img {
-    max-width: 75%;
+    max-width: 50vw;
     height: auto;
 
     &:not(:last-child) {
@@ -109,7 +100,7 @@ a {
   }
 
   video {
-    max-width: 70%;
+    max-width: 60vw;
     height: auto;
 
     &:not(:last-child) {
