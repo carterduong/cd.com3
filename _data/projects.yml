@@ -16,11 +16,11 @@
   role: Co-Editor, Art Direction, Design
   description: A student-run publication</a> that explores the culture of style, art, and design at UC San Diego. Writing by Leanza Ellacer and Zach Roberts. Photography by Carter Duong, Lily Tang, and Dora Wang.
   images:
-    - assets/img/fq1.png
-    - assets/img/fq2.png
-    - assets/img/fq3.png
-    - assets/img/fq4.png
-    - assets/img/fq5.png
+    - fq1.png
+    - fq2.png
+    - fq3.png
+    - fq4.png
+    - fq5.png
 
 - Bitter Melon:
   title: Bitter Melon
@@ -29,8 +29,8 @@
   role: Web Design, Development
   description: A lightweight photoblog developed using <a href="https://choo.io" target="_blank">choo</a>. Photography by Carter Duong.
   gifs: 
-    - assets/img/b-m.mp4
-    - assets/img/b-m2.mp4
+    - b-m.mp4
+    - b-m2.mp4
 
 - Heavy Friends: 
   title: Heavy Friends
@@ -39,8 +39,8 @@
   role: Web Design, Development
   description: A microsite for a weekly radio show based out of KSDT at UC San Diego. Developed using three.js.
   images:
-    - assets/img/hffm-tear-small.png
-    - assets/img/iPhone_1.png
+    - hffm-tear-small.png
+    - iPhone_1.png
 
 - Résumé: 
   title: Résumé
@@ -48,17 +48,17 @@
   role: Game Design, Development  
   description: A short game about computer programming, squiggles, and being true to yourself. Developed using Unity.
   gifs:
-    - assets/img/resume-1.mp4
-    - assets/img/resume-2.mp4
-    - assets/img/resume-3.mp4
+    - resume-1.mp4
+    - resume-2.mp4
+    - resume-3.mp4
 
 - Posters:
   title: Posters
   date: 2018–2019
   description: Miscellaneous sketches in 3D and 2D.
   images: 
-    - assets/img/aiv.png
-    - assets/img/160.png
+    - aiv.png
+    - 160.png
 
 - Extras: 
   title: 
@@ -66,4 +66,4 @@
   role:
   description: 
   images:
-    - assets/img/rents.png
+    - rents.png

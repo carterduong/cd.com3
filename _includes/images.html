@@ -1,5 +1,6 @@
 {% assign imgix-url = "https://carterduong.imgix.net/" %}
-  
+{% assign local-url = "assets/img/" %}  
+
 <div id="canvas-container"></div>
 
 <!-- Projects -->
@@ -7,10 +8,13 @@
 <div class="project {{project.title}}" id="{{forloop.index}}">
   <div class="image-container">
       {% for image-url in project.images %}
-        <img src="{{image-url}}">
+        <img src="{{local-url}}{{image-url}}"
+        srcset="{{imgix-url}}{{image-url}}?w=500 500w, {{imgix-url}}{{image-url}} 1000w"
+        size="100vw" 
+        />
       {% endfor %}
       {% for gif in project.gifs %}
-        <video muted autoplay playsinline loop src="{{gif}}" type="video/mp4"></video>
+        <video muted autoplay playsinline loop src="{{local-url}}{{gif}}" type="video/mp4"></video>
       {% endfor %}
   </div>
 </div>
