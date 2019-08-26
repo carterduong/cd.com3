@@ -211,6 +211,6 @@ function generateCurve() {
   nurbsGeometry = new THREE.BufferGeometry();
   nurbsGeometry.setFromPoints( nurbsCurve.getPoints( 200 ) );
   nurbsLine = new THREE.Line( nurbsGeometry, nurbsMaterial );
-  nurbsLine.position.set( 0, 50, 0 );
+  nurbsLine.position.set( 0, -20, 0 );
   group.add( nurbsLine );
 }

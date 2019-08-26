@@ -80,7 +80,7 @@ a {
   left: 0;
   z-index: -1;
   width: 100vw;
-  height: 88vh;
+  height: 75vh;
 } 
 
 .image-container {
@@ -91,7 +91,7 @@ a {
   margin-bottom: 4vh;
 
   img {
-    max-width: 50vw;
+    max-width: 70vw;
     height: auto;
 
     &:not(:last-child) {
@@ -100,7 +100,7 @@ a {
   }
 
   video {
-    max-width: 60vw;
+    max-width: 50vw;
     height: auto;
 
     &:not(:last-child) {
@@ -115,6 +115,10 @@ a {
 
 
 /**** Text ****/
+
+.pulse {
+  animation: pulse 3s infinite;
+}
 
 .bottom-text {
   position: fixed;
@@ -171,7 +175,6 @@ a {
 }
 
 .title-text {
-  animation: pulse 3s infinite;
   flex: 1;
 
   @media screen and (min-width: $break-small) {

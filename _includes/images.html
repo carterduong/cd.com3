@@ -11,7 +11,7 @@
 
         <img src="{{imgix-url}}{{image-url}}"
         srcset="{{imgix-url}}{{image-url}}?w=500 500w, {{imgix-url}}{{image-url}}?w=1000 1000w"
-        sizes="50vw"
+        sizes="(min-width: 800px) 60vw, 70vw"
         />
 
       {% endfor %}
